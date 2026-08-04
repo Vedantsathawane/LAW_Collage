@@ -14,22 +14,25 @@ import RecruiterSlider from '../components/placement/RecruiterSlider';
 import { DEPARTMENTS, NEWS, EVENTS, FAQS } from '../data/mockData';
 import useHeroSlider from '../hooks/useHeroSlider';
 import { INSTITUTION_NAME, INSTITUTION_SHORT_NAME } from '../config/institutionConfig';
+import heroLaw1 from '../assets/hero-law-1.jpg';
+import heroLaw2 from '../assets/hero-law-2.jpg';
+import heroLaw3 from '../assets/hero-law-3.jpg';
 
 const HERO_SLIDES = [
   {
-    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1400&h=700",
+    image: heroLaw1,
     badge: "Est. 1965",
     title: "A Legacy of Judicial Excellence Since 1965",
     subtitle: "Nurturing elite legal practitioners, pro-bono advocates, and judicial officers of the state. Approved by the Bar Council of India."
   },
   {
-    image: "https://images.unsplash.com/photo-1505664194779-8bebcb95c557?auto=format&fit=crop&q=80&w=1400&h=700",
+    image: heroLaw2,
     badge: "NAAC A++ Grade",
     title: "Highest Institutional Trust & Prestige",
     subtitle: "Consistently ranked among the peak state-funded law colleges in the nation with a certified CGPA score of 3.78."
   },
   {
-    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=1400&h=700",
+    image: heroLaw3,
     badge: "91.8% Placement",
     title: "Premier Placements & Clerkships",
     subtitle: "Direct associate hires in Tier-1 corporate law firms (Khaitan, Cyril Amarchand, AZB) and legal compliance boards."
@@ -219,14 +222,14 @@ const Home = () => {
             <div className="lg:col-span-6 relative h-[380px] md:h-[450px] w-full max-w-md mx-auto select-none mt-10 lg:mt-0">
               <div className="absolute inset-4 rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
                 <img
-                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=500&h=500"
+                  src={heroLaw1}
                   alt="Moot Court Hall Bench"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute inset-4 rounded-2xl overflow-hidden shadow-xl border-4 border-white transform translate-x-12 translate-y-12 opacity-60">
                 <img
-                  src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&q=80&w=500&h=500"
+                  src={heroLaw2}
                   alt="Law Library Research"
                   className="w-full h-full object-cover"
                 />
