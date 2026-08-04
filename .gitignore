@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Production build output
+frontend/dist/
+
+# IDE and System Files
+.vscode/
+.idea/
+.DS_Store
+*.log
