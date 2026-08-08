@@ -1,78 +1,70 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaGraduationCap, FaArrowRight } from 'react-icons/fa';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
-import DepartmentCard from '../../components/faculty/DepartmentCard';
-import Modal from '../../components/ui/Modal';
-import { DEPARTMENTS } from '../../data/mockData';
+import Card from '../../components/ui/Card';
+import { COURSES } from '../../data/mockData';
+import { INSTITUTION_NAME } from '../../config/institutionConfig';
 
 const Departments = () => {
-  const [selectedDept, setSelectedDept] = useState(null);
-
   return (
     <div className="pt-24 pb-16 bg-slate-50 font-body">
       <Container>
         <SectionTitle
-          title="Our Academic Departments"
+          title="Academic Programs"
           subtitle="Academics"
           centered={true}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {DEPARTMENTS.map((dept) => (
-            <DepartmentCard
-              key={dept.id}
-              dept={dept}
-              onSelect={(d) => setSelectedDept(d)}
-            />
-          ))}
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="text-center text-slate-600 text-sm md:text-base leading-relaxed mb-8">
+            <p>
+              <strong>{INSTITUTION_NAME}</strong> offers the following degree programs approved by the Bar Council of India (BCI) / State Government of Maharashtra and affiliated with Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU).
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {COURSES.map((course) => (
+              <Card key={course.id} className="p-6 bg-white border border-slate-100 shadow-premium flex flex-col justify-between" hoverEffect={true}>
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center text-primary shrink-0">
+                      <FaGraduationCap className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-base md:text-lg font-bold font-heading text-primary-dark">
+                        {course.name}
+                      </h3>
+                      <span className="text-[10px] font-bold text-secondary uppercase">{course.level}</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-xs md:text-sm text-slate-500 leading-relaxed mb-4">
+                    {course.description}
+                  </p>
+
+                  <div className="grid grid-cols-2 gap-3 text-xs text-slate-500 bg-slate-50 border border-slate-100 rounded-xl p-3">
+                    <div>
+                      <span className="font-bold text-slate-400 text-[10px] uppercase block">Duration</span>
+                      <span className="font-semibold text-primary">{course.duration}</span>
+                    </div>
+                    <div>
+                      <span className="font-bold text-slate-400 text-[10px] uppercase block">Intake</span>
+                      <span className="font-semibold text-primary">{course.intake} Seats</span>
+                    </div>
+                  </div>
+                </div>
+
+                <Link to="/academics/courses" className="mt-6 text-xs font-bold text-primary hover:text-accent flex items-center gap-1">
+                  <span>View Full Syllabus</span>
+                  <FaArrowRight className="w-2.5 h-2.5" />
+                </Link>
+              </Card>
+            ))}
+          </div>
         </div>
       </Container>
-
-      {/* Detailed Department Modal */}
-      {selectedDept && (
-        <Modal
-          isOpen={!!selectedDept}
-          onClose={() => setSelectedDept(null)}
-          title={selectedDept.name}
-          size="lg"
-        >
-          <div className="space-y-6">
-            <div>
-              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1.5">Vision & Mission</h4>
-              <p className="text-sm font-semibold text-primary mb-2">Vision:</p>
-              <p className="text-xs md:text-sm text-slate-600 italic mb-3">"{selectedDept.vision}"</p>
-              <p className="text-sm font-semibold text-primary mb-2">Mission:</p>
-              <p className="text-xs md:text-sm text-slate-600">{selectedDept.mission}</p>
-            </div>
-
-            <div className="border-t border-slate-100 pt-4">
-              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Key Highlights</h4>
-              <ul className="list-disc pl-5 text-xs md:text-sm text-slate-600 space-y-2">
-                {selectedDept.highlights.map((h, i) => (
-                  <li key={i}>{h}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="border-t border-slate-100 pt-4">
-              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Specialized Laboratories</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {selectedDept.labs.map((lab, i) => (
-                  <div key={i} className="p-4 bg-slate-50 border border-slate-100 rounded-xl">
-                    <p className="text-sm font-bold text-primary-dark">{lab.name}</p>
-                    <p className="text-[11px] text-slate-400 mt-1 uppercase tracking-wider">Capacity: {lab.capacity} Students</p>
-                    <p className="text-xs text-slate-500 mt-2 font-medium">Equipped: {lab.equipment}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="border-t border-slate-100 pt-4 text-xs text-slate-400">
-              <p>For research queries or inquiries, contact HOD: <a href={`mailto:${selectedDept.email}`} className="text-primary hover:underline">{selectedDept.email}</a></p>
-            </div>
-          </div>
-        </Modal>
-      )}
     </div>
   );
 };

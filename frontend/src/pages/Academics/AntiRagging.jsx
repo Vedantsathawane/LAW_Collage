@@ -23,7 +23,7 @@ const AntiRagging = () => {
                   Ragging is a Cognizable Offense
                 </h3>
                 <p className="text-xs md:text-sm text-red-900 leading-relaxed font-medium">
-                  In compliance with the UGC Regulations on curbing the menace of ragging in higher educational institutions, 2009, GWLC maintains a strict <b>Zero Tolerance policy</b>. Ragging in any form (verbal, physical, psychological) is strictly prohibited both inside the campus and hostels.
+                  In compliance with the UGC Regulations on curbing the menace of ragging in higher educational institutions, 2009, the college maintains a strict <b>Zero Tolerance policy</b>. Ragging in any form (verbal, physical, psychological) is strictly prohibited inside the campus.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4 text-xs font-bold text-red-950">
                   <span className="bg-red-200/50 px-3 py-1.5 rounded-lg">Punishable with Suspension</span>

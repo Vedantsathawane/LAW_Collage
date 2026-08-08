@@ -3,16 +3,27 @@ import { FaFilePdf, FaDownload, FaSearch } from 'react-icons/fa';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import Card from '../../components/ui/Card';
-import { DOWNLOADS } from '../../data/mockData';
+import { STUDENT_RULES, SPECIAL_FEATURES } from '../../data/mockData';
 
 const Downloads = () => {
+  const prospectusDownloads = [
+    { id: 1, title: "Dr. Milind Yerne College of Law - Official Prospectus (3 & 5 Yr LL.B.)", size: "4.8 MB", date: "2026-27 Session", type: "PDF" },
+    { id: 2, title: "LL.B. 3 Years & 5 Years Semester Course Syllabus (RTMNU Affiliated)", size: "3.5 MB", date: "Academic Year 2026", type: "PDF" },
+    { id: 3, title: "Bar Council of India (BCI) & State Govt. Approval Declaration", size: "1.2 MB", date: "Official Document", type: "PDF" },
+    { id: 4, title: "Rules for Students & Code of Conduct (21 Rules Sheet)", size: "650 KB", date: "Student Directive", type: "PDF" }
+  ];
+
   return (
     <div className="pt-24 pb-16 bg-slate-50 font-body">
       <Container>
-        <SectionTitle title="Official Downloads & Syllabi" subtitle="Student Corner" centered={true} />
+        <SectionTitle title="Official Prospectus, Rules & Syllabi" subtitle="Student Corner" centered={true} />
 
-        <div className="max-w-4xl mx-auto space-y-4">
-          {DOWNLOADS.map((doc) => (
+        {/* Downloadable Documents */}
+        <div className="max-w-4xl mx-auto space-y-4 mb-16">
+          <h3 className="text-lg font-bold font-heading text-primary-dark mb-4 border-b border-slate-200 pb-2">
+            Prospectus & Official Downloads
+          </h3>
+          {prospectusDownloads.map((doc) => (
             <Card key={doc.id} className="p-5 bg-white border border-slate-100 shadow-premium flex flex-col sm:flex-row sm:items-center justify-between gap-4 group" hoverEffect={true}>
               <div className="flex items-start gap-3.5 min-w-0">
                 <div className="w-10 h-10 rounded-lg bg-red-50 text-red-500 flex items-center justify-center shrink-0 group-hover:bg-red-500 group-hover:text-white transition-colors">
@@ -29,7 +40,7 @@ const Downloads = () => {
               </div>
 
               <button
-                onClick={() => alert(`Downloading document file: ${doc.title}`)}
+                onClick={() => alert(`Downloading official file: ${doc.title}`)}
                 className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-light text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-md cursor-pointer shrink-0 transition-colors"
               >
                 <FaDownload className="w-3.5 h-3.5" />
@@ -37,6 +48,43 @@ const Downloads = () => {
               </button>
             </Card>
           ))}
+        </div>
+
+        {/* Dress Code Section */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <Card className="p-6 md:p-8 bg-gradient-to-tr from-amber-900 to-amber-950 text-white rounded-2xl border-none shadow-xl">
+            <h3 className="text-xl font-bold font-heading mb-4 text-amber-300 border-b border-amber-800/60 pb-2">
+              Prescribed College Dress Code (Prospectus Page 7)
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm">
+              <div className="p-4 bg-amber-950/60 rounded-xl border border-amber-800/40">
+                <p className="font-extrabold text-amber-300 uppercase tracking-wide mb-1">Boys Dress Code:</p>
+                <p className="text-slate-200">Black full pant and White shirt</p>
+              </div>
+              <div className="p-4 bg-amber-950/60 rounded-xl border border-amber-800/40">
+                <p className="font-extrabold text-amber-300 uppercase tracking-wide mb-1">Girls Dress Code:</p>
+                <p className="text-slate-200">Black Salwar and White Kurta OR Black Saree & White blouse</p>
+                <p className="text-[11px] text-red-300 font-bold mt-1.5">(Skirts, Jeans, Tops, T-Shirts are strictly prohibited)</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* 21 Rules for Students */}
+        <div className="max-w-4xl mx-auto">
+          <Card className="p-6 md:p-8 bg-white border border-slate-100 shadow-premium" hoverEffect={false}>
+            <h3 className="text-xl font-bold font-heading text-primary-dark mb-6 border-b border-slate-100 pb-3">
+              Rules for Students (Prospectus Pages 5 & 6)
+            </h3>
+            <div className="space-y-3.5 text-xs md:text-sm text-slate-700 leading-relaxed font-medium">
+              {STUDENT_RULES.map((rule, idx) => (
+                <div key={idx} className="p-3 bg-slate-50 border border-slate-100 rounded-xl flex items-start gap-3">
+                  <span className="text-amber-700 font-bold shrink-0">{idx + 1}.</span>
+                  <p>{rule.replace(/^\d+\.\s*/, '')}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
         </div>
       </Container>
     </div>

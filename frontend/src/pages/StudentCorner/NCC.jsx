@@ -14,10 +14,10 @@ const NCC = () => {
           <Card className="p-6 md:p-8 bg-white border border-slate-100 shadow-premium" hoverEffect={false}>
             <h3 className="text-xl font-bold font-heading text-primary-dark mb-4 flex items-center gap-2">
               <FaShieldAlt className="text-secondary" />
-              <span>GWLC NCC Army Detachment</span>
+              <span>NCC Unit</span>
             </h3>
-            <p className="text-xs md:text-sm text-slate-500 leading-relaxed mb-6">
-              The NCC Unit at GWLC is affiliated with the State Infantry Battalion. It instills discipline, patriotism, and leadership in male and female cadets. Cadets undergo systematic weekend drill formations, weapons handling models, map reading, and local trekking camps.
+            <p className="text-xs md:text-sm text-slate-500 leading-relaxed font-medium">
+              The NCC Unit instills discipline, patriotism, and leadership in students. Cadets undergo systematic drill formations, adventure camps, and personality development activities.
             </p>
 
             <div className="p-4 bg-slate-50 border border-slate-100 rounded-xl flex items-start gap-3.5 mb-6">
@@ -38,7 +38,7 @@ const NCC = () => {
               <div>
                 <p className="text-xs font-bold text-primary-dark">NCC Associate Officer (ANO)</p>
                 <p className="text-sm font-semibold text-slate-600 mt-0.5">Lt. Mr. Amit Verma (Assistant Professor, Law)</p>
-                <p className="text-[11px] text-slate-400 mt-1 font-mono">Contact: ncc@gwlc.edu.in</p>
+                <p className="text-[11px] text-slate-400 mt-1 font-mono">Contact: info@dmycl.edu.in</p>
               </div>
             </div>
           </Card>

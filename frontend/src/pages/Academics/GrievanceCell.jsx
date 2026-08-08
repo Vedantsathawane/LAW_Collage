@@ -20,7 +20,7 @@ const GrievanceCell = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert(`Thank you ${formData.name}. Your grievance has been recorded. Reference Ticket ID: GWLC-2026-${Math.floor(1000 + Math.random() * 9000)}. Our committee will contact you shortly.`);
+    alert(`Thank you ${formData.name}. Your grievance has been recorded. Reference Ticket ID: DMYCL-2026-${Math.floor(1000 + Math.random() * 9000)}. Our committee will contact you shortly.`);
     setFormData({ name: '', rollNo: '', email: '', phone: '', subject: '', description: '' });
   };
 
@@ -37,7 +37,7 @@ const GrievanceCell = () => {
                 Redressal Mechanism
               </h3>
               <p className="text-xs md:text-sm text-slate-500 leading-relaxed">
-                GWLC is dedicated to solving student grievances in a timely and objective manner. Complaints regarding examinations, evaluations, fee structures, classroom facilities, or canteen hygiene can be submitted directly through this portal.
+                Dr. Milind Yerne College of Law is dedicated to solving student grievances in a timely and objective manner. Complaints regarding examinations, evaluations, fee structures, classroom facilities, or canteen hygiene can be submitted directly through this portal.
               </p>
             </Card>
 
@@ -88,7 +88,7 @@ const GrievanceCell = () => {
                       required
                       value={formData.rollNo}
                       onChange={(e) => setFormData({ ...formData, rollNo: e.target.value })}
-                      placeholder="e.g. GWLC/LAW/2026/025"
+                      placeholder="e.g. DMYCL/LAW/2026/025"
                       className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
                     />
                   </div>

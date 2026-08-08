@@ -23,7 +23,7 @@ const Contact = () => {
   return (
     <div className="pt-24 pb-16 bg-slate-50 font-body">
       <Container>
-        <SectionTitle title="Get in Touch with Us" subtitle="Contact GWLC" centered={true} />
+        <SectionTitle title="Get in Touch with Us" subtitle="Contact Us" centered={true} />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-5xl mx-auto">
           {/* Contact Details Directory */}
@@ -36,15 +36,15 @@ const Contact = () => {
               <ul className="space-y-4 text-xs md:text-sm text-slate-200">
                 <li className="flex items-start gap-3">
                   <FaMapMarkerAlt className="text-secondary w-5 h-5 shrink-0 mt-0.5" />
-                  <span>North Campus, Mall Road, University Enclave, New Delhi, 110007, India</span>
+                  <span>Dr. Milind Yerne College of Law, Pauni, Dist. Bhandara, Maharashtra - 441910</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <FaPhoneAlt className="text-secondary w-5 h-5 shrink-0" />
-                  <a href="tel:+911127667725" className="hover:underline">+91-11-27667725</a>
+                  <a href="tel:+919422155100" className="hover:underline">+91-94221-55100</a>
                 </li>
                 <li className="flex items-center gap-3">
                   <FaEnvelope className="text-secondary w-5 h-5 shrink-0" />
-                  <a href="mailto:info@gwlc.edu.in" className="hover:underline">info@gwlc.edu.in</a>
+                  <a href="mailto:info@dmycl.edu.in" className="hover:underline">info@dmycl.edu.in</a>
                 </li>
               </ul>
             </Card>

@@ -58,7 +58,7 @@ const Career = () => {
                 </div>
 
                 <button
-                  onClick={() => alert(`To apply for ${job.title}, please send your detailed resume, marks cards transcripts, and experience letters to: establishment@gwlc.edu.in before ${job.deadline}.`)}
+                  onClick={() => alert(`To apply for ${job.title}, please send your detailed resume, marks cards transcripts, and experience letters to: info@dmycl.edu.in before ${job.deadline}.`)}
                   className="bg-primary hover:bg-primary-light text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-md cursor-pointer shrink-0"
                 >
                   Apply Now

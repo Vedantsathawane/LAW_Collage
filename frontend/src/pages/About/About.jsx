@@ -1,26 +1,28 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { FaAward, FaBuilding, FaUsers, FaGraduationCap } from 'react-icons/fa';
+import { FaBalanceScale, FaGraduationCap, FaMapMarkerAlt, FaAward } from 'react-icons/fa';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import Card from '../../components/ui/Card';
+import { INSTITUTION_NAME } from '../../config/institutionConfig';
+import { LOCATION_DETAILS } from '../../data/mockData';
+import heroLaw1 from '../../assets/hero-law-1.jpg';
 
 const About = () => {
-  const stats = [
-    { icon: <FaGraduationCap className="text-secondary w-6 h-6" />, count: "4,500+", label: "Alumni Globally" },
-    { icon: <FaUsers className="text-secondary w-6 h-6" />, count: "180+", label: "Expert Faculty" },
-    { icon: <FaBuilding className="text-secondary w-6 h-6" />, count: "45 Acres", label: "Lush Campus" },
-    { icon: <FaAward className="text-secondary w-6 h-6" />, count: "A++", label: "NAAC Grade" }
+  const factCards = [
+    { icon: <FaBalanceScale className="text-secondary w-6 h-6" />, label: "BCI Approved", detail: "Bar Council of India / State Govt." },
+    { icon: <FaGraduationCap className="text-secondary w-6 h-6" />, label: "RTMNU Affiliated", detail: "Rashtrasant Tukadoji Maharaj Nagpur University" },
+    { icon: <FaMapMarkerAlt className="text-secondary w-6 h-6" />, label: "Pauni, Bhandara", detail: "Vidarbha Region, Maharashtra" },
+    { icon: <FaAward className="text-secondary w-6 h-6" />, label: "Est. 2007", detail: "Late Malatai Yerne Smruti Sanstha" }
   ];
 
   return (
     <div className="pt-24 pb-16 bg-slate-50">
       <Container>
-        {/* Banner with overlaid text */}
+        {/* Banner */}
         <div className="relative h-[250px] md:h-[400px] rounded-3xl overflow-hidden mb-12 md:mb-16 select-none shadow-premium">
           <img
-            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=1200&h=600"
-            alt="College campus overview"
+            src={heroLaw1}
+            alt="Dr. Milind Yerne College of Law campus"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/80 to-transparent flex items-center p-8 md:p-16">
@@ -29,35 +31,53 @@ const About = () => {
                 Institutional Profile
               </span>
               <h1 className="text-3xl md:text-5xl font-bold font-heading mt-3 leading-tight text-white">
-                About Our Institute
+                About Our College
               </h1>
               <p className="text-xs md:text-sm text-slate-300 mt-4 leading-relaxed font-body">
-                Nurturing scholarly competence, academic excellence, and ethical values since 1965.
+                Professional legal education with the vision of "Education for All" since 2007.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Narrative & Stats section */}
+        {/* About Content & Fact Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
           <div className="lg:col-span-7 space-y-6 text-slate-600 leading-relaxed text-sm md:text-base font-body">
-            <SectionTitle title="A Legacy of Excellence in Legal Education" subtitle="Overview" />
+            <SectionTitle title="Empowering Rural & Urban Scholars in Legal Education" subtitle="About The College" />
             <p>
-              Government West Law College (GWLC) stands as a beacon of jurisprudential rigor and student empowerment. Established with a vision to provide world-class legal education, GWLC hosts multiple Moot Court Chambers, a free Legal Aid Clinic, a digitalized law library, and regular placement cycles hosting top national law firms.
+              <strong>{INSTITUTION_NAME}</strong> is managed by <em>Late Malatai Yerne Smruti Bahuddeshiya Sanstha (LMYSBS)</em>, established in 2007 to provide quality professional legal education within reach of every section of society.
             </p>
             <p>
-              Approved by the Bar Council of India (BCI) and recognized with a prestigious <b>NAAC A++ Grade (CGPA 3.78)</b>, we offer comprehensive undergraduate and postgraduate paths in Constitutional Law, Criminal Criminology, Corporate Advisory, and IP & Technology Regulations.
+              Situated at <strong>Pauni</strong> — a historical Municipal council along with Nagpur Municipal Corporation in Vidarbha region — the college serves students across Bhandara, Nagpur, Chandrapur, and Gadchiroli districts (including talukas like Nagbhid, Rampuri, Chimur, Wadasa, Armori, Kurkheda, Bhiwapur, Lakhandur, Lakhani, and Sakoli).
             </p>
+            <p>
+              Approved by the <strong>Bar Council of India (BCI) / State Govt. of Maharashtra</strong> and affiliated with <strong>Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU)</strong>, the college offers <strong>LL.B. 3 Years and 5 Years Semester Courses</strong> with dedicated moot court training, annual legal aid camps, human rights cells, and expert career guidance.
+            </p>
+
+            {/* Reach/Coverage */}
+            <div className="p-5 bg-amber-50 border border-amber-200 rounded-2xl text-xs md:text-sm text-amber-900">
+              <h4 className="font-bold text-amber-950 text-sm uppercase tracking-wide border-b border-amber-200 pb-1 mb-2">
+                Regional Coverage
+              </h4>
+              <ul className="space-y-1 font-medium">
+                {LOCATION_DETAILS.coveredTalukas.map((taluka, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-amber-700 font-bold">•</span>
+                    <span>{taluka}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-            {stats.map((stat, idx) => (
+            {factCards.map((fact, idx) => (
               <Card key={idx} className="p-6 text-center bg-white flex flex-col items-center justify-center border border-slate-100 shadow-premium" hoverEffect={true}>
                 <div className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center mb-3">
-                  {stat.icon}
+                  {fact.icon}
                 </div>
-                <p className="text-2xl font-extrabold text-primary font-mono leading-none">{stat.count}</p>
-                <p className="text-xs font-semibold text-slate-400 mt-2 uppercase tracking-wide">{stat.label}</p>
+                <p className="text-sm font-extrabold text-primary font-heading leading-none">{fact.label}</p>
+                <p className="text-xs font-semibold text-slate-400 mt-2">{fact.detail}</p>
               </Card>
             ))}
           </div>

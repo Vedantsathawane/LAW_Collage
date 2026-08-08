@@ -199,9 +199,9 @@ const Apply = () => {
                       className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
                     >
                       <option value="">Select Department</option>
-                      {DEPARTMENTS.map((dept) => (
-                        <option key={dept.id} value={dept.id}>
-                          {dept.name}
+                      {COURSES.map((course) => (
+                        <option key={course.id} value={course.id}>
+                          {course.name}
                         </option>
                       ))}
                     </select>

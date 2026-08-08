@@ -22,7 +22,7 @@ const NSS = () => {
               NSS Unit: 'Not Me But You'
             </h3>
             <p className="text-xs md:text-sm text-slate-500 leading-relaxed mb-6">
-              The NSS wing at GWLC encourages students to build a strong civic sense by participating directly in community service projects. Active volunteers who complete 120 hours of social programs are awarded certificates recognized by central boards and universities.
+              The NSS wing encourages students to build a strong civic sense by participating directly in community service projects. Active volunteers who complete 120 hours of social programs are awarded certificates recognized by central boards and universities.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -47,7 +47,7 @@ const NSS = () => {
               <div>
                 <p className="text-xs font-bold text-primary-dark">NSS Program Officer</p>
                 <p className="text-sm font-semibold text-slate-600 mt-0.5">Dr. Jayant Patel (Associate Professor, Law)</p>
-                <p className="text-[11px] text-slate-400 mt-1 font-mono">Contact: nss@gwlc.edu.in</p>
+                <p className="text-[11px] text-slate-400 mt-1 font-mono">Contact: info@dmycl.edu.in</p>
               </div>
             </div>
           </Card>

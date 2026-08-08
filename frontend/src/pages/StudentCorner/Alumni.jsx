@@ -36,7 +36,7 @@ const Alumni = () => {
               </div>
               <h3 className="text-lg font-bold font-heading text-white">Join Our Global Network</h3>
               <p className="text-xs text-slate-200 leading-relaxed mt-2.5">
-                GWLC boasts an active network of alumni working in top law firms (Cyril Amarchand, Khaitan & Co, Trilegal), judicial services (High Court Judges, Magistrates), corporate counsel roles, and government legal advisory circles globally. Join the register to mentor junior batches and attend yearly summits.
+                Our alumni network connects graduates working in legal practice, judicial services, corporate counsel roles, and public administration. Join the alumni register to stay connected with the institution.
               </p>
             </Card>
 

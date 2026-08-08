@@ -55,9 +55,17 @@ const Examination = () => {
                   <span>Student Conduct & Rules</span>
                 </h3>
                 <div className="space-y-3.5">
+                  {/* Prospectus Exam & Casual Student Rules */}
+                  <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl mb-4 text-xs md:text-sm text-amber-900 leading-relaxed font-semibold">
+                    <p className="font-bold text-amber-950 mb-1">■ College Examination & Sessional Rules:</p>
+                    <p className="mb-2">Students must appear in the terminal examination held twice during the academic session. Satisfactory performance is mandatory for academic progress under RTMNU regulations.</p>
+                    <p className="font-bold text-amber-950 mb-1">■ Casual Student Provision (Page 7 Prospectus):</p>
+                    <p>Students absent or failing in sessional examinations will have to take admission as a casual student by paying the required fees within 15 days from the declaration of results.</p>
+                  </div>
+
                   {guidelines.map((guide, idx) => (
                     <div key={idx} className="flex items-start gap-3">
-                      <span className="text-red-500 text-xs mt-1 shrink-0">•</span>
+                      <span className="text-amber-600 text-xs mt-1 shrink-0">•</span>
                       <span className="text-xs md:text-sm text-slate-600 leading-relaxed">{guide}</span>
                     </div>
                   ))}

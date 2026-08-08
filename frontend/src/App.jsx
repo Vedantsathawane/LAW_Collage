@@ -8,10 +8,10 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <Helmet>
-          <title>GWLC | Government West Law College</title>
-          <meta name="description" content="Official Portal of Government West Law College (GWLC). NAAC A++ Grade accredited state university law college delivering LL.B, B.A. LL.B (Hons.), B.B.A. LL.B (Hons.), and LL.M programs." />
-          <meta name="keywords" content="GWLC, law college, admissions 2026, CLAT cut-offs, LL.B, NLU alternative, BCI approved" />
-          <link rel="canonical" href="https://gwlc.edu.in/" />
+          <title>Dr. Milind Yerne College of Law | LL.B. 3 & 5 Years Semester Course | Pauni, Bhandara</title>
+          <meta name="description" content="Official website of Dr. Milind Yerne College of Law, Pauni, Dist. Bhandara, Maharashtra. Approved by Bar Council of India / State Govt. Affiliated with Rashtrasant Tukadoji Maharaj Nagpur University. Offering LL.B. 3 and 5 Years Semester Courses." />
+          <meta name="keywords" content="Dr Milind Yerne College of Law, DMYCL, law college Pauni, LL.B. Bhandara, BCI approved law college, RTMNU law, legal education Maharashtra" />
+          <link rel="canonical" href="https://dmycl.edu.in/" />
         </Helmet>
         <AppRoutes />
       </BrowserRouter>

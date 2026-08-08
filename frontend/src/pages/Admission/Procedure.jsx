@@ -7,9 +7,9 @@ import Card from '../../components/ui/Card';
 
 const Procedure = () => {
   const steps = [
-    { year: "Phase 1: Apply", title: "Online Registration & Portal Upload", description: "Candidates register on the state centralized admission portal, select GWLC as their preferred institution, and upload marks records." },
-    { year: "Phase 2: Cut-offs", title: "Cut-off Generation & Merit Verification", description: "Merit lists are declared based on aggregate qualifying exams (10+2 scores or CLAT ranks for UG, graduation averages for LL.B)." },
-    { year: "Phase 3: Counseling", title: "Document Verification & Counseling", description: "Verified candidates report to the GWLC campus auditorium with original files for physical authentication by HOD committees." },
+    { year: "Phase 1: Apply", title: "Online Registration & Application", description: "Candidates register on the state admission portal, select Dr. Milind Yerne College of Law as their preferred institution, and submit required documents." },
+    { year: "Phase 2: Merit List", title: "Merit List Publication", description: "Selection lists are generated based on qualifying examination scores and university reservation norms." },
+    { year: "Phase 3: Counseling", title: "Document Verification & Admissions", description: "Verified candidates report to the college campus with original files for physical verification by admission committees." },
     { year: "Phase 4: Finish", title: "Fee Receipt & Class Induction", description: "Upon committee approval, candidates pay fees online, obtain institutional email credentials, and attend the general orientation." }
   ];
 

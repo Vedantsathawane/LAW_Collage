@@ -9,7 +9,7 @@ const Sports = () => {
     { icon: <FaFutbol className="text-secondary w-5 h-5" />, title: "Full-Size Turf Field", desc: "A green turf football field featuring spectator galleries, running lanes, and automatic floodlight rigs for training." },
     { icon: <FaDribbble className="text-secondary w-5 h-5" />, title: "Concrete Basketball Courts", desc: "Two standard-dimension courts with acrylic backboards, alongside a concrete tennis court setup." },
     { icon: <FaRunning className="text-secondary w-5 h-5" />, title: "Indoor Sports Gymnasium", desc: "Four high-end table tennis decks, two wooden-floored badminton arenas, and standard weightlifting setups." },
-    { icon: <FaTrophy className="text-secondary w-5 h-5" />, title: "State-Level Achievements", desc: "GWLC athletes have secured top ranks in state-level university football divisions and athletic short sprints." }
+    { icon: <FaTrophy className="text-secondary w-5 h-5" />, title: "University Achievements", desc: "Our student athletes have secured top ranks in inter-collegiate athletics and sports meets." }
   ];
 
   return (

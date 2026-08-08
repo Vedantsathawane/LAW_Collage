@@ -78,7 +78,7 @@ const Fees = () => {
                 </h3>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                All fees must be submitted online using the college SBI Collect portal. GWLC does not accept cash payments. Installment permissions require written HOD approval.
+                All fees must be submitted online or via institutional payment portal as per college instructions. The college does not accept unauthorized cash payments. Installment permissions require written Principal approval.
               </p>
               <div className="p-3.5 bg-slate-50 border border-slate-100 rounded-xl flex items-start gap-2.5">
                 <FaInfoCircle className="text-primary w-4.5 h-4.5 shrink-0 mt-0.5" />

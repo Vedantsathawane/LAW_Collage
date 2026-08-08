@@ -20,12 +20,12 @@ const RTI = () => {
               </h3>
             </div>
             <p className="text-xs md:text-sm text-slate-500 leading-relaxed space-y-4">
-              GWLC is a state-funded institution governed under the regulations of the State Higher Education Department. We maintain complete compliance with the Right to Information Act, 2005. Citizens of India can request official academic records, financial sheets, and recruitment guidelines as permitted under the act.
+              Dr. Milind Yerne College of Law maintains compliance with the Right to Information Act, 2005. Citizens of India can request official academic records and information as permitted under the act.
             </p>
             <div className="mt-4 p-4 bg-slate-50 border border-slate-100 rounded-xl flex items-start gap-3">
               <FaFileAlt className="text-primary w-5 h-5 shrink-0 mt-0.5" />
               <p className="text-xs text-slate-600 font-medium leading-relaxed">
-                RTI applications should be drafted with clear inquiries, accompanied by a fee stamp of ₹10 (by demand draft, IPO, or judicial stamp) favoring the <b>"Principal, Government West Law College"</b>, payable at New Delhi.
+                RTI applications should be drafted with clear inquiries, accompanied by a fee stamp of ₹10 (by demand draft, IPO, or judicial stamp) favoring the <b>"Principal, Dr. Milind Yerne College of Law"</b>, payable at Pauni, Dist. Bhandara.
               </p>
             </div>
           </Card>

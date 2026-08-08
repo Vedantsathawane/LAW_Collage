@@ -1,47 +1,95 @@
 import React from 'react';
-import { FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle, FaHeart, FaStar, FaAward, FaBuilding } from 'react-icons/fa';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import Card from '../../components/ui/Card';
+import { SANSTHA_NAME, LEADERSHIP } from '../../config/institutionConfig';
 
 const Management = () => {
-  const members = [
-    { name: "Shri Vikramaditya Singh", role: "Chairman", details: "Retd. IAS Officer, State Administration Specialist" },
-    { name: "Smt. Suchitra Sen", role: "Treasurer", details: "Senior Chartered Accountant & Finance Consultant" },
-    { name: "Dr. G.S. Krishnan", role: "Member Secretary", details: "Ex-Officio Principal, GWLC Academic Head" },
-    { name: "Dr. Ramesh Chandra", role: "Government Nominee", details: "Director, State Higher Education Board Authority" },
-    { name: "Prof. H.S. Kapoor", role: "University Representative", details: "Professor of Law, State Central University" },
-    { name: "Mr. Nandan Nilekar", role: "Bar Council Representative", details: "Senior Advocate, State High Court Panels" }
+  const leaders = [
+    {
+      name: LEADERSHIP.inspiration.name,
+      role: LEADERSHIP.inspiration.title,
+      details: LEADERSHIP.inspiration.designation,
+      iconColor: "text-amber-500",
+      badge: "Inspiration"
+    },
+    {
+      name: LEADERSHIP.mentor.name,
+      role: LEADERSHIP.mentor.title,
+      details: LEADERSHIP.mentor.designation,
+      iconColor: "text-blue-600",
+      badge: "Mentor"
+    },
+    {
+      name: LEADERSHIP.president.name,
+      role: LEADERSHIP.president.title,
+      details: "Leading Sanstha Administration & Institutional Growth",
+      iconColor: "text-emerald-600",
+      badge: "President"
+    },
+    {
+      name: LEADERSHIP.secretary.name,
+      role: LEADERSHIP.secretary.title,
+      details: "Founder & Academic Visionary of Dr. M.Y. College of Law",
+      iconColor: "text-purple-600",
+      badge: "Secretary & Founder"
+    }
   ];
 
   return (
     <div className="pt-24 pb-16 bg-slate-50 font-body">
       <Container>
-        <SectionTitle title="Our Leadership & Governance" subtitle="Management" centered={true} />
+        <SectionTitle title="Sanstha Management & Patron Leadership" subtitle={SANSTHA_NAME} centered={true} />
 
-        <div className="max-w-4xl mx-auto space-y-6">
-          <Card className="p-6 md:p-8 bg-white border border-slate-100 shadow-premium" hoverEffect={false}>
-            <h3 className="text-xl font-bold font-heading text-primary-dark mb-4 border-b border-slate-100 pb-2">
-              Governing Council Structure
-            </h3>
-            <p className="text-xs md:text-sm text-slate-500 leading-relaxed mb-6">
-              The Governing Council coordinates the strategic policies, infrastructural development, financial budgets, and recruitment guidelines for GWLC. The council contains representatives from the State Government, academic law universities, Bar Council panels, and institutional faculty nominees.
-            </p>
-
-            {/* Members directory */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {members.map((m, idx) => (
-                <div key={idx} className="flex items-center gap-3 p-4 bg-slate-50 border border-slate-100 rounded-xl group hover:border-primary/20 transition-all duration-300">
-                  <FaUserCircle className="text-slate-300 w-10 h-10 group-hover:text-primary transition-colors shrink-0" />
-                  <div className="min-w-0">
-                    <p className="text-sm font-bold text-primary-dark truncate">{m.name}</p>
-                    <p className="text-[10px] font-bold text-secondary uppercase tracking-wider">{m.role}</p>
-                    <p className="text-[11px] text-slate-400 truncate mt-0.5">{m.details}</p>
-                  </div>
-                </div>
-              ))}
+        {/* Tribute Section */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <Card className="p-8 bg-gradient-to-tr from-amber-900 to-amber-950 text-white relative overflow-hidden border-none shadow-xl">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="w-20 h-20 rounded-full bg-amber-500/20 border-2 border-amber-400 flex items-center justify-center text-amber-300 shrink-0">
+                <FaHeart className="w-9 h-9" />
+              </div>
+              <div className="text-center md:text-left">
+                <span className="text-xs font-bold text-amber-300 uppercase tracking-widest bg-amber-950/60 px-3 py-1 rounded-full border border-amber-700/50">
+                  A Tribute To Our Inspiration
+                </span>
+                <h3 className="text-2xl font-bold font-heading text-white mt-2">
+                  LATE MALATAI YERNE
+                </h3>
+                <p className="text-sm italic text-amber-100 mt-2 leading-relaxed">
+                  "Education for All" was your mantra which we imbibe while laying the foundation of our 'Sanstha'. It's been your inspiration & blessings that has enabled us to make 'professional education' within reach of every section of society.
+                </p>
+              </div>
             </div>
           </Card>
+        </div>
+
+        {/* Patrons & Office Bearers Grid */}
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-xl font-bold font-heading text-primary-dark text-center mb-8">
+            Governing Sanstha Leadership ({SANSTHA_NAME})
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {leaders.map((m, idx) => (
+              <Card key={idx} className="p-6 bg-white border border-slate-100 shadow-premium" hoverEffect={true}>
+                <div className="flex items-start gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center shrink-0 border border-slate-200">
+                    <FaUserCircle className={`w-10 h-10 ${m.iconColor}`} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-md bg-primary/10 text-primary-dark">
+                      {m.badge}
+                    </span>
+                    <h4 className="text-lg font-bold font-heading text-primary-dark mt-1">
+                      {m.name}
+                    </h4>
+                    <p className="text-xs font-semibold text-amber-700">{m.role}</p>
+                    <p className="text-xs text-slate-500 mt-1">{m.details}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </Container>
     </div>

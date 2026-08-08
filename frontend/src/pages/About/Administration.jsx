@@ -1,34 +1,31 @@
 import React from 'react';
-import { FaUserCircle, FaEnvelope, FaBuilding } from 'react-icons/fa';
+import { FaBuilding, FaEnvelope } from 'react-icons/fa';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import Card from '../../components/ui/Card';
+import { CONTACTS } from '../../config/institutionConfig';
 
 const Administration = () => {
   const sections = [
     {
-      title: "Office of the Registrar",
-      head: "Shri Anupam Sen",
-      email: "registrar@gwlc.edu.in",
-      duties: "Coordinates admissions data, state board affiliations, examinations registration, and general academic regulations."
+      title: "Office of the Principal",
+      email: CONTACTS.principal,
+      duties: "Overall academic administration, faculty coordination, student discipline, and institutional governance."
     },
     {
-      title: "Accounts & Audit Block",
-      head: "Smt. Preeti Banerjee",
-      email: "accounts@gwlc.edu.in",
-      duties: "Manages student fee payments, scholarship disbursements, DST research funds, and institutional audit checklists."
+      title: "Admissions & Registration",
+      email: CONTACTS.registrar,
+      duties: "Manages student admissions, registration, enrollment records, and university examination coordination."
     },
     {
-      title: "Establishment Section",
-      head: "Shri Subhash Nair",
-      email: "establishment@gwlc.edu.in",
-      duties: "Coordinates recruitments, staff allocations, guest faculty payrolls, and campus infrastructure maintenance tenders."
+      title: "Accounts & Finance",
+      email: CONTACTS.accounts,
+      duties: "Handles student fee payments, scholarship disbursements, institutional budgets, and audit compliance."
     },
     {
-      title: "Academic & Student Affairs",
-      head: "Dr. Jayant Deshmukh",
-      email: "academic.admin@gwlc.edu.in",
-      duties: "Coordinates student ID cards, hostel allocations, bus passes, and student grievance portal queries."
+      title: "Academic Affairs",
+      email: CONTACTS.academicAdmin,
+      duties: "Coordinates academic schedules, student ID cards, library operations, and student welfare activities."
     }
   ];
 
@@ -54,25 +51,23 @@ const Administration = () => {
                 </p>
               </div>
 
-              {/* Head Contact Block */}
               <div className="border-t border-slate-100 pt-4 flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <FaUserCircle className="text-slate-300 w-8 h-8 shrink-0" />
-                  <div className="min-w-0">
-                    <p className="text-[9px] font-bold text-slate-400 uppercase leading-none">Officer In-Charge</p>
-                    <p className="text-xs font-semibold text-primary-dark mt-0.5 truncate">{sec.head}</p>
-                  </div>
-                </div>
                 <a
                   href={`mailto:${sec.email}`}
                   className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-accent font-semibold"
                 >
                   <FaEnvelope className="w-3.5 h-3.5" />
-                  <span className="hidden sm:inline">Email Contact</span>
+                  <span>{sec.email}</span>
                 </a>
               </div>
             </Card>
           ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <p className="text-xs text-slate-400 italic">
+            Staff directory and officer details will be updated with official information.
+          </p>
         </div>
       </Container>
     </div>
