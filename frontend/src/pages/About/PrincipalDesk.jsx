@@ -7,17 +7,17 @@ import { INSTITUTION_NAME } from '../../config/institutionConfig';
 
 const PrincipalDesk = () => {
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Principal's Desk" subtitle="Welcome Message" />
 
         <div className="max-w-3xl mx-auto">
           <Card className="p-6 md:p-10 bg-white border border-slate-100 shadow-premium" hoverEffect={false}>
-            <FaQuoteLeft className="text-secondary/20 w-12 h-12 mb-4" />
-            <h4 className="text-xl font-bold font-heading text-primary-dark mb-4">
+            <FaQuoteLeft className="text-[#B88E1C] w-12 h-12 mb-4 opacity-80" />
+            <h4 className="text-xl font-bold font-heading text-[#26130D] mb-4">
               Welcome to {INSTITUTION_NAME}
             </h4>
-            <div className="text-slate-600 leading-relaxed text-sm md:text-base space-y-4">
+            <div className="text-[#211A17] leading-relaxed text-sm md:text-base space-y-4 font-medium">
               <p>
                 It is our privilege to welcome students, parents, and visitors to <strong>{INSTITUTION_NAME}</strong>. Our institution is committed to providing quality professional legal education within reach of every section of society.
               </p>
@@ -29,8 +29,8 @@ const PrincipalDesk = () => {
               </p>
             </div>
 
-            <div className="border-t border-slate-100 pt-4 mt-6 text-right">
-              <p className="text-xs text-slate-400 italic">Principal's office details will be updated soon.</p>
+            <div className="border-t border-[#DFAE24]/20 pt-4 mt-6 text-right">
+              <p className="text-xs text-[#756D63] font-semibold italic">Principal's office details will be updated soon.</p>
             </div>
           </Card>
         </div>

@@ -14,7 +14,7 @@ const Downloads = () => {
   ];
 
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Official Prospectus, Rules & Syllabi" subtitle="Student Corner" centered={true} />
 
@@ -52,19 +52,20 @@ const Downloads = () => {
 
         {/* Dress Code Section */}
         <div className="max-w-4xl mx-auto mb-16">
-          <Card className="p-6 md:p-8 bg-gradient-to-tr from-amber-900 to-amber-950 text-white rounded-2xl border-none shadow-xl">
-            <h3 className="text-xl font-bold font-heading mb-4 text-amber-300 border-b border-amber-800/60 pb-2">
+          <Card className="p-6 md:p-8 bg-white border border-[#DFAE24]/40 shadow-premium relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#DFAE24]/15 rounded-full blur-xl pointer-events-none -mr-8 -mt-8" />
+            <h3 className="text-xl font-bold font-heading mb-4 text-[#26130D] border-b border-[#DFAE24]/30 pb-2">
               Prescribed College Dress Code (Prospectus Page 7)
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs md:text-sm">
-              <div className="p-4 bg-amber-950/60 rounded-xl border border-amber-800/40">
-                <p className="font-extrabold text-amber-300 uppercase tracking-wide mb-1">Boys Dress Code:</p>
-                <p className="text-slate-200">Black full pant and White shirt</p>
+              <div className="p-4 bg-[#FAF8F3] rounded-xl border border-[#DFAE24]/30">
+                <p className="font-extrabold text-[#B88E1C] uppercase tracking-wide mb-1 font-heading">Boys Dress Code:</p>
+                <p className="text-[#211A17] font-semibold">Black full pant and White shirt</p>
               </div>
-              <div className="p-4 bg-amber-950/60 rounded-xl border border-amber-800/40">
-                <p className="font-extrabold text-amber-300 uppercase tracking-wide mb-1">Girls Dress Code:</p>
-                <p className="text-slate-200">Black Salwar and White Kurta OR Black Saree & White blouse</p>
-                <p className="text-[11px] text-red-300 font-bold mt-1.5">(Skirts, Jeans, Tops, T-Shirts are strictly prohibited)</p>
+              <div className="p-4 bg-[#FAF8F3] rounded-xl border border-[#DFAE24]/30">
+                <p className="font-extrabold text-[#B88E1C] uppercase tracking-wide mb-1 font-heading">Girls Dress Code:</p>
+                <p className="text-[#211A17] font-semibold">Black Salwar and White Kurta OR Black Saree & White blouse</p>
+                <p className="text-[11px] text-[#DC2626] font-extrabold mt-1.5">(Skirts, Jeans, Tops, T-Shirts are strictly prohibited)</p>
               </div>
             </div>
           </Card>

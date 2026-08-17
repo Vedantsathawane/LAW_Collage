@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaChevronUp, FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import Container from '../common/Container';
-import { INSTITUTION_NAME } from '../../config/institutionConfig';
+import { INSTITUTION_NAME, DEVELOPED_BY } from '../../config/institutionConfig';
 
 const Footer = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -159,15 +159,31 @@ const Footer = () => {
 
         </div>
 
-        {/* Divider & Copyright */}
-        <div className="border-t border-[#DFAE24]/30 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-[#FAF8F3]/70 font-medium">
-          <p className="text-center sm:text-left">
+        {/* Divider & Copyright — UI/UX Signature Bar */}
+        <div className="border-t border-[#DFAE24]/30 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-[#FAF8F3]/70 font-medium">
+          {/* Copyright */}
+          <p className="text-center md:text-left text-[#FAF8F3]/60">
             &copy; {new Date().getFullYear()} {INSTITUTION_NAME}. All Rights Reserved.
           </p>
-          <div className="flex space-x-4">
-            <Link to="/academics/rti" className="hover:text-[#DFAE24]">RTI Cell</Link>
-            <Link to="/academics/anti-ragging" className="hover:text-[#DFAE24]">Anti-Ragging Squad</Link>
-            <Link to="/academics/grievance-cell" className="hover:text-[#DFAE24]">Grievance Redressal</Link>
+
+          {/* Centered Premium Designer Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-[#3D2017]/60 border border-[#DFAE24]/35 text-[11px] shadow-sm hover:border-[#DFAE24] transition-all">
+            <span className="text-[10px] font-bold text-[#DFAE24] uppercase tracking-widest font-heading">
+              Design & Tech
+            </span>
+            <span className="text-[#DFAE24]/40">|</span>
+            <span className="font-extrabold text-[#FAF8F3] tracking-wide">
+              {DEVELOPED_BY}
+            </span>
+          </div>
+
+          {/* Quick Institutional Links */}
+          <div className="flex items-center space-x-3 text-[#FAF8F3]/60">
+            <Link to="/academics/rti" className="hover:text-[#DFAE24] transition-colors">RTI Cell</Link>
+            <span className="text-[#DFAE24]/30">•</span>
+            <Link to="/academics/anti-ragging" className="hover:text-[#DFAE24] transition-colors">Anti-Ragging Squad</Link>
+            <span className="text-[#DFAE24]/30">•</span>
+            <Link to="/academics/grievance-cell" className="hover:text-[#DFAE24] transition-colors">Grievance Redressal</Link>
           </div>
         </div>
       </Container>

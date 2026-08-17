@@ -1,303 +1,160 @@
 import React from 'react';
-import { FaUserPlus, FaPaperPlane, FaUser, FaBook, FaSchool } from 'react-icons/fa';
+import { FaGraduationCap, FaExternalLinkAlt, FaCheckCircle, FaClipboardList, FaExclamationTriangle, FaShieldAlt, FaFileAlt } from 'react-icons/fa';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import Card from '../../components/ui/Card';
 import Button from '../../components/common/Button';
-import { DEPARTMENTS } from '../../data/mockData';
-import useAdmissionForm from '../../hooks/useAdmissionForm';
-import { INSTITUTION_SHORT_NAME } from '../../config/institutionConfig';
+import { INSTITUTION_NAME, INSTITUTION_SHORT_NAME, openGoogleForm } from '../../config/institutionConfig';
+import { COURSES } from '../../data/mockData';
 
 const Apply = () => {
-  const {
-    formData,
-    submitted,
-    filteredCourses: availableCourses,
-    handleInputChange,
-    handleDepartmentChange,
-    executeSubmit
-  } = useAdmissionForm();
-
-  const handleSubmit = (e) => {
-    executeSubmit(e, (applicationNumber, email) => {
-      alert(`Admission Form Submitted Successfully!\nApplication Number: ${applicationNumber}\nAn email with details has been sent to ${email}.`);
-    });
-  };
-
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body min-h-screen">
       <Container>
-        <SectionTitle title="Online Admission Portal" subtitle="Apply Online" centered={true} />
+        <SectionTitle title="ONLINE ADMISSION PORTAL 2026-27" subtitle="Student Application" centered={true} />
 
-        <div className="max-w-4xl mx-auto">
-          <Card className="p-6 md:p-10 bg-white border border-slate-100 shadow-premium" hoverEffect={false}>
-            <div className="flex items-center gap-3.5 mb-8 border-b border-slate-100 pb-4">
-              <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center text-primary shrink-0">
-                <FaUserPlus className="w-6 h-6" />
+        <div className="max-w-4xl mx-auto space-y-8">
+          
+          {/* Official 60 Seats Admission Notice Header Banner */}
+          <div className="p-6 md:p-8 rounded-2xl bg-[#26130D] border-2 border-[#DFAE24] text-[#FAF8F3] shadow-xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#DFAE24]/10 rounded-bl-full pointer-events-none" />
+            
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+              <div className="space-y-2">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#DFAE24] text-[#26130D] text-[11px] font-extrabold uppercase tracking-wider">
+                  <FaExclamationTriangle className="w-3.5 h-3.5" />
+                  <span>Limited Admission Notice</span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-extrabold font-heading text-[#FAF8F3]">
+                  Sanctioned Intake Capacity: 60 Seats
+                </h2>
+                <p className="text-xs md:text-sm text-[#FAF8F3]/90 leading-relaxed font-body max-w-xl">
+                  {INSTITUTION_NAME} maintains a strictly approved capacity of <strong>60 Seats</strong> for LL.B. 3 Years & 5 Years Semester Courses under RTMNU & Bar Council of India guidelines.
+                </p>
+              </div>
+
+              <div className="shrink-0 w-full md:w-auto">
+                <button
+                  onClick={openGoogleForm}
+                  className="w-full md:w-auto bg-[#DFAE24] hover:bg-[#F4C430] text-[#26130D] font-extrabold text-sm px-7 py-4 rounded-xl shadow-lg transition-all border border-[#DFAE24]/50 flex items-center justify-center gap-2.5 cursor-pointer"
+                >
+                  <span>Start Application Form</span>
+                  <FaExternalLinkAlt className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Student Application Instructions Card */}
+          <Card className="p-6 md:p-10 bg-white border border-[#DFAE24]/30 shadow-premium" hoverEffect={false}>
+            <div className="flex items-center gap-3.5 mb-8 border-b border-[#DFAE24]/20 pb-4">
+              <div className="w-12 h-12 rounded-xl bg-[#26130D]/10 flex items-center justify-center text-[#26130D] shrink-0">
+                <FaGraduationCap className="w-6 h-6 text-[#B88E1C]" />
               </div>
               <div>
-                <h3 className="text-xl font-bold font-heading text-primary-dark">
-                  {INSTITUTION_SHORT_NAME} Professional Candidates Registration 2026-27
+                <h3 className="text-xl font-bold font-heading text-[#26130D]">
+                  {INSTITUTION_SHORT_NAME} Student Registration Guidelines (2026-27)
                 </h3>
-                <p className="text-xs text-slate-400 mt-1 font-medium">
-                  Ensure all fields marked with * are filled accurately in compliance with Bar Council guidelines.
+                <p className="text-xs text-[#756D63] mt-1 font-medium">
+                  Follow the official steps below to complete your admission enquiry and student application.
                 </p>
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-8 text-xs md:text-sm">
+            {/* Steps Outline */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="p-5 bg-[#FAF8F3] border border-[#DFAE24]/30 rounded-xl space-y-2">
+                <span className="w-7 h-7 rounded-full bg-[#26130D] text-[#DFAE24] text-xs font-bold flex items-center justify-center">1</span>
+                <h4 className="text-sm font-bold font-heading text-[#26130D]">Fill Google Form</h4>
+                <p className="text-xs text-[#756D63]">Enter personal, contact, academic details, and course selection accurately in the Google Form.</p>
+              </div>
+
+              <div className="p-5 bg-[#FAF8F3] border border-[#DFAE24]/30 rounded-xl space-y-2">
+                <span className="w-7 h-7 rounded-full bg-[#26130D] text-[#DFAE24] text-xs font-bold flex items-center justify-center">2</span>
+                <h4 className="text-sm font-bold font-heading text-[#26130D]">Application Processing</h4>
+                <p className="text-xs text-[#756D63]">The college admission committee reviews submitted applications for 60-seat merit eligibility.</p>
+              </div>
+
+              <div className="p-5 bg-[#FAF8F3] border border-[#DFAE24]/30 rounded-xl space-y-2">
+                <span className="w-7 h-7 rounded-full bg-[#26130D] text-[#DFAE24] text-xs font-bold flex items-center justify-center">3</span>
+                <h4 className="text-sm font-bold font-heading text-[#26130D]">Counseling & Fee</h4>
+                <p className="text-xs text-[#756D63]">Shortlisted candidates are notified to submit original documents for verification at campus.</p>
+              </div>
+            </div>
+
+            {/* Courses Offered Details */}
+            <div className="space-y-4 mb-8 pt-6 border-t border-[#DFAE24]/20">
+              <h4 className="text-base font-bold text-[#26130D] font-heading flex items-center gap-2">
+                <FaClipboardList className="text-[#B88E1C]" />
+                <span>Programs Available for Application</span>
+              </h4>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {COURSES.map((course) => (
+                  <div key={course.id} className="p-5 bg-[#FAF8F3] border border-[#DFAE24]/30 rounded-xl space-y-2">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-extrabold text-[#B88E1C] uppercase tracking-wider">{course.level}</span>
+                      <span className="text-xs font-bold px-2.5 py-0.5 bg-[#26130D] text-[#DFAE24] rounded-md">{course.intake} Seats</span>
+                    </div>
+                    <h5 className="text-sm font-bold font-heading text-[#26130D]">{course.name}</h5>
+                    <p className="text-xs text-[#756D63] font-medium"><strong>Duration:</strong> {course.duration}</p>
+                    <p className="text-xs text-[#756D63]">{course.eligibility}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Required Documents List */}
+            <div className="space-y-4 mb-8 pt-6 border-t border-[#DFAE24]/20">
+              <h4 className="text-base font-bold text-[#26130D] font-heading flex items-center gap-2">
+                <FaFileAlt className="text-[#B88E1C]" />
+                <span>Documents Required During Physical Verification</span>
+              </h4>
               
-              {/* Step 1: Personal Details */}
-              <div className="space-y-4">
-                <h4 className="text-sm font-bold text-primary flex items-center gap-2 border-b border-slate-50 pb-2 font-heading">
-                  <FaUser className="text-secondary w-3.5 h-3.5" />
-                  <span>1. Candidate Personal Information</span>
-                </h4>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Candidate Full Name *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.fullName}
-                      onChange={(e) => handleInputChange('fullName', e.target.value)}
-                      placeholder="As per secondary certificated sheet"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="space-y-1.5">
-                      <label className="font-bold text-slate-500">Date of Birth *</label>
-                      <input
-                        type="date"
-                        required
-                        value={formData.dob}
-                        onChange={(e) => handleInputChange('dob', e.target.value)}
-                        className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                      />
-                    </div>
-                    <div className="space-y-1.5">
-                      <label className="font-bold text-slate-500">Gender *</label>
-                      <select
-                        required
-                        value={formData.gender}
-                        onChange={(e) => handleInputChange('gender', e.target.value)}
-                        className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                      >
-                        <option value="">Select</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                      </select>
-                    </div>
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#756D63] font-medium">
+                <div className="flex items-start gap-2 p-2.5 bg-[#FAF8F3] rounded-lg border border-[#DFAE24]/20">
+                  <FaCheckCircle className="text-[#16A34A] w-4 h-4 shrink-0 mt-0.5" />
+                  <span>10th & 12th Standard Original Marksheets with 3 photocopies</span>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Email Address *</label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => handleInputChange('email', e.target.value)}
-                      placeholder="For admissions updates"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Mobile Phone *</label>
-                    <input
-                      type="tel"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
-                      placeholder="e.g. +91 98765 43210"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
+                <div className="flex items-start gap-2 p-2.5 bg-[#FAF8F3] rounded-lg border border-[#DFAE24]/20">
+                  <FaCheckCircle className="text-[#16A34A] w-4 h-4 shrink-0 mt-0.5" />
+                  <span>Graduation Marksheet (For 3-Year LL.B. Candidates)</span>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Parent / Guardian Name *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.parentName}
-                      onChange={(e) => handleInputChange('parentName', e.target.value)}
-                      placeholder="Father's or Mother's name"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Parent Contact Mobile *</label>
-                    <input
-                      type="tel"
-                      required
-                      value={formData.parentPhone}
-                      onChange={(e) => handleInputChange('parentPhone', e.target.value)}
-                      placeholder="For emergency alerts"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
+                <div className="flex items-start gap-2 p-2.5 bg-[#FAF8F3] rounded-lg border border-[#DFAE24]/20">
+                  <FaCheckCircle className="text-[#16A34A] w-4 h-4 shrink-0 mt-0.5" />
+                  <span>Transfer Certificate (TC) & Migration Certificate</span>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
-                  <div className="sm:col-span-6 space-y-1.5">
-                    <label className="font-bold text-slate-500">Correspondence Address *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.address}
-                      onChange={(e) => handleInputChange('address', e.target.value)}
-                      placeholder="Street, locality, city details"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
-                  <div className="sm:col-span-3 space-y-1.5">
-                    <label className="font-bold text-slate-500">State *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.state}
-                      onChange={(e) => handleInputChange('state', e.target.value)}
-                      placeholder="e.g. Delhi"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
-                  <div className="sm:col-span-3 space-y-1.5">
-                    <label className="font-bold text-slate-500">Pincode *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.pincode}
-                      onChange={(e) => handleInputChange('pincode', e.target.value)}
-                      placeholder="6 digits"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
+                <div className="flex items-start gap-2 p-2.5 bg-[#FAF8F3] rounded-lg border border-[#DFAE24]/20">
+                  <FaCheckCircle className="text-[#16A34A] w-4 h-4 shrink-0 mt-0.5" />
+                  <span>Caste Certificate & Validity Certificate (if applicable)</span>
+                </div>
+                <div className="flex items-start gap-2 p-2.5 bg-[#FAF8F3] rounded-lg border border-[#DFAE24]/20">
+                  <FaCheckCircle className="text-[#16A34A] w-4 h-4 shrink-0 mt-0.5" />
+                  <span>Aadhaar Card Copy & 4 Passport Photos</span>
+                </div>
+                <div className="flex items-start gap-2 p-2.5 bg-[#FAF8F3] rounded-lg border border-[#DFAE24]/20">
+                  <FaCheckCircle className="text-[#16A34A] w-4 h-4 shrink-0 mt-0.5" />
+                  <span>Entrance Exam Scorecard (MH-CET / CLAT if applicable)</span>
                 </div>
               </div>
+            </div>
 
-              {/* Step 2: Course Preferences */}
-              <div className="space-y-4 pt-4 border-t border-slate-100">
-                <h4 className="text-sm font-bold text-primary flex items-center gap-2 border-b border-slate-50 pb-2 font-heading">
-                  <FaBook className="text-secondary w-3.5 h-3.5" />
-                  <span>2. Program Selection Preference</span>
-                </h4>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Department Preference *</label>
-                    <select
-                      required
-                      value={formData.deptPreference}
-                      onChange={(e) => handleDepartmentChange(e.target.value)}
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    >
-                      <option value="">Select Department</option>
-                      {COURSES.map((course) => (
-                        <option key={course.id} value={course.id}>
-                          {course.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Course Preference *</label>
-                    <select
-                      required
-                      value={formData.coursePreference}
-                      onChange={(e) => handleInputChange('coursePreference', e.target.value)}
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                      disabled={!formData.deptPreference}
-                    >
-                      <option value="">Select Course</option>
-                      {availableCourses.map((course) => (
-                        <option key={course.id} value={course.id}>
-                          {course.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+            {/* Launch Google Form Large CTA */}
+            <div className="pt-6 border-t border-[#DFAE24]/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-2 text-xs text-[#756D63] font-medium">
+                <FaShieldAlt className="text-[#B88E1C] w-4 h-4 shrink-0" />
+                <span>Official Application hosted on secure Google Forms platform</span>
               </div>
 
-              {/* Step 3: Academic Qualifications */}
-              <div className="space-y-4 pt-4 border-t border-slate-100">
-                <h4 className="text-sm font-bold text-primary flex items-center gap-2 border-b border-slate-50 pb-2 font-heading">
-                  <FaSchool className="text-secondary w-3.5 h-3.5" />
-                  <span>3. Prior Academic Qualifications</span>
-                </h4>
+              <button
+                onClick={openGoogleForm}
+                className="w-full sm:w-auto bg-[#26130D] hover:bg-[#3D2017] text-[#DFAE24] font-extrabold text-sm px-8 py-3.5 rounded-xl shadow-xl transition-all border border-[#DFAE24]/40 flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>Open Google Application Form</span>
+                <FaExternalLinkAlt className="w-3.5 h-3.5" />
+              </button>
+            </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Qualifying Examination *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.qualifyingExam}
-                      onChange={(e) => handleInputChange('qualifyingExam', e.target.value)}
-                      placeholder="e.g. CBSE 10+2 / B.A. Degree"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Aggregate Marks Score *</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.qualifyingScore}
-                      onChange={(e) => handleInputChange('qualifyingScore', e.target.value)}
-                      placeholder="e.g. 84.5% or 8.9 CGPA"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">Passing Year *</label>
-                    <input
-                      type="number"
-                      required
-                      min={2020}
-                      max={2026}
-                      value={formData.passingYear}
-                      onChange={(e) => handleInputChange('passingYear', e.target.value)}
-                      placeholder="e.g. 2026"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="font-bold text-slate-500">CLAT / LSAT Rank (Optional)</label>
-                    <input
-                      type="text"
-                      placeholder="e.g. AIR 1402"
-                      className="w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-slate-700 bg-white"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Submit Buttons */}
-              <div className="pt-6 border-t border-slate-100 flex items-center justify-end">
-                <Button
-                  type="submit"
-                  variant="primary"
-                  className="w-full sm:w-auto px-10 py-3"
-                  icon={<FaPaperPlane />}
-                  disabled={submitted}
-                >
-                  {submitted ? "Registering Candidate..." : "Submit Admission Application"}
-                </Button>
-              </div>
-
-            </form>
           </Card>
         </div>
       </Container>
@@ -306,3 +163,4 @@ const Apply = () => {
 };
 
 export default Apply;
+

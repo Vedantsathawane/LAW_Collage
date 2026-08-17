@@ -38,25 +38,26 @@ const Management = () => {
   ];
 
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Sanstha Management & Patron Leadership" subtitle={SANSTHA_NAME} centered={true} />
 
         {/* Tribute Section */}
         <div className="max-w-4xl mx-auto mb-12">
-          <Card className="p-8 bg-gradient-to-tr from-amber-900 to-amber-950 text-white relative overflow-hidden border-none shadow-xl">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              <div className="w-20 h-20 rounded-full bg-amber-500/20 border-2 border-amber-400 flex items-center justify-center text-amber-300 shrink-0">
+          <Card className="p-8 bg-white border border-[#DFAE24]/40 shadow-premium relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#DFAE24]/15 rounded-full blur-xl pointer-events-none -mr-12 -mt-12" />
+            <div className="flex flex-col md:flex-row items-center gap-6 relative z-10">
+              <div className="w-20 h-20 rounded-full bg-[#FAF8F3] border-2 border-[#DFAE24] flex items-center justify-center text-[#B88E1C] shrink-0 shadow-sm">
                 <FaHeart className="w-9 h-9" />
               </div>
               <div className="text-center md:text-left">
-                <span className="text-xs font-bold text-amber-300 uppercase tracking-widest bg-amber-950/60 px-3 py-1 rounded-full border border-amber-700/50">
+                <span className="text-xs font-bold text-[#B88E1C] uppercase tracking-widest bg-[#FAF8F3] px-3 py-1 rounded-full border border-[#DFAE24]/40 font-heading">
                   A Tribute To Our Inspiration
                 </span>
-                <h3 className="text-2xl font-bold font-heading text-white mt-2">
+                <h3 className="text-2xl font-bold font-heading text-[#26130D] mt-2">
                   LATE MALATAI YERNE
                 </h3>
-                <p className="text-sm italic text-amber-100 mt-2 leading-relaxed">
+                <p className="text-sm italic text-[#211A17] mt-2 leading-relaxed font-serif font-medium">
                   "Education for All" was your mantra which we imbibe while laying the foundation of our 'Sanstha'. It's been your inspiration & blessings that has enabled us to make 'professional education' within reach of every section of society.
                 </p>
               </div>

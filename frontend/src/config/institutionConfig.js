@@ -8,6 +8,7 @@ export const INSTITUTION_COURSES = "LL.B. 3 and 5 Years Semester Course";
 export const LOCATION = "Pauni, Dist. Bhandara, Maharashtra";
 export const PHONE_PRIMARY = "+91-94221-55100";
 export const ADDRESS = "Dr. Milind Yerne College of Law, Pauni, Dist. Bhandara, Maharashtra - 441910";
+export const DEVELOPED_BY = "Vedant Sathawane & Team";
 
 export const LEADERSHIP = {
   inspiration: { name: "Hon'ble Shri. Praful Patel", designation: "Member of Parliament (Rajya Sabha)", title: "Our Inspiration" },
@@ -29,5 +30,13 @@ export const CONTACTS = {
   accounts: `accounts@${INSTITUTION_EMAIL_DOMAIN}`,
   academicAdmin: `academic.admin@${INSTITUTION_EMAIL_DOMAIN}`
 };
+// Centralized Student Application Google Form URL
+export const GOOGLE_FORM_URL = import.meta.env.VITE_GOOGLE_FORM_URL || "https://docs.google.com/forms/d/e/1FAIpQLSe81tMZcU4GHO9Ejt0siFDerBo7OXpTNil4Lapdr-N3CA9UFg/viewform";
 
-
+// Secure helper function to open Google Form in new tab
+export const openGoogleForm = (e) => {
+  if (e && typeof e.preventDefault === 'function') {
+    e.preventDefault();
+  }
+  window.open(GOOGLE_FORM_URL, "_blank", "noopener,noreferrer");
+};

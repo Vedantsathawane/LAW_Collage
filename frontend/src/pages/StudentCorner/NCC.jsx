@@ -6,7 +6,7 @@ import Card from '../../components/ui/Card';
 
 const NCC = () => {
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="National Cadet Corps (NCC) Wing" subtitle="Student Corner" centered={true} />
 

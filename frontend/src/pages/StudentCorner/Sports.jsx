@@ -13,20 +13,21 @@ const Sports = () => {
   ];
 
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Sports Facilities & Achievements" subtitle="Campus Life" centered={true} />
 
         <div className="max-w-4xl mx-auto space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {assets.map((asset, i) => (
-              <Card key={i} className="p-6 bg-white border border-slate-100 shadow-premium flex flex-col justify-between" hoverEffect={true}>
-                <div>
-                  <div className="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center mb-4">
-                    {asset.icon}
+              <Card key={i} className="p-6 bg-white border border-[#DFAE24]/40 shadow-premium relative overflow-hidden flex flex-col justify-between" hoverEffect={true}>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#DFAE24]/15 rounded-full blur-xl pointer-events-none -mr-8 -mt-8" />
+                <div className="relative z-10">
+                  <div className="w-10 h-10 rounded-xl bg-[#FAF8F3] border border-[#DFAE24]/30 flex items-center justify-center mb-4 shadow-sm">
+                    {React.cloneElement(asset.icon, { className: "text-[#B88E1C] w-5 h-5" })}
                   </div>
-                  <h4 className="text-base font-bold font-heading text-primary-dark mb-2">{asset.title}</h4>
-                  <p className="text-xs text-slate-500 leading-relaxed">{asset.desc}</p>
+                  <h4 className="text-base font-bold font-heading text-[#26130D] mb-2">{asset.title}</h4>
+                  <p className="text-xs text-[#211A17] font-medium leading-relaxed">{asset.desc}</p>
                 </div>
               </Card>
             ))}

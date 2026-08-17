@@ -6,7 +6,7 @@ import { INSTITUTION_NAME } from '../../config/institutionConfig';
 
 const NAAC = () => {
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="NAAC Accreditation" subtitle="Quality Assurance" centered={true} />
 

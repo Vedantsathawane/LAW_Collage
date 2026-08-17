@@ -26,23 +26,23 @@ const Vision = () => {
   ];
 
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Pillars of Institutional Direction" subtitle="Vision & Mission" centered={true} />
 
         {/* Vision & Mission Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Vision card */}
-          <Card className="p-8 bg-gradient-to-tr from-primary to-primary-dark text-white relative border-none overflow-hidden" hoverEffect={false}>
-            <div className="absolute top-0 right-0 transform translate-x-12 -translate-y-12 w-48 h-48 bg-white/5 rounded-full pointer-events-none" />
-            <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-6">
-              <FaEye className="text-amber-400 w-6 h-6 animate-pulse" />
+          <Card className="p-8 bg-white border border-[#DFAE24]/40 shadow-premium relative overflow-hidden" hoverEffect={false}>
+            <div className="absolute top-0 right-0 transform translate-x-12 -translate-y-12 w-48 h-48 bg-[#DFAE24]/15 rounded-full pointer-events-none" />
+            <div className="w-12 h-12 rounded-xl bg-[#FAF8F3] border border-[#DFAE24]/30 flex items-center justify-center mb-6 shadow-sm">
+              <FaEye className="text-[#B88E1C] w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-bold font-heading mb-4 text-white">Our Vision</h3>
-            <ul className="space-y-3 text-xs md:text-sm text-slate-200 leading-relaxed font-body">
+            <h3 className="text-2xl font-bold font-heading mb-4 text-[#26130D]">Our Vision</h3>
+            <ul className="space-y-3.5 text-xs md:text-sm text-[#211A17] font-medium leading-relaxed font-body">
               {visionPoints.map((point, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <span className="text-amber-400 font-bold shrink-0">■</span>
+                  <span className="text-[#B88E1C] font-extrabold shrink-0">■</span>
                   <span>{point}</span>
                 </li>
               ))}
@@ -50,15 +50,16 @@ const Vision = () => {
           </Card>
 
           {/* Mission card */}
-          <Card className="p-8 bg-white border border-slate-100 shadow-premium" hoverEffect={false}>
-            <div className="w-12 h-12 rounded-xl bg-primary/5 flex items-center justify-center mb-6">
-              <FaBullseye className="text-amber-600 w-6 h-6" />
+          <Card className="p-8 bg-white border border-[#DFAE24]/40 shadow-premium relative overflow-hidden" hoverEffect={false}>
+            <div className="absolute top-0 right-0 transform translate-x-12 -translate-y-12 w-48 h-48 bg-[#DFAE24]/15 rounded-full pointer-events-none" />
+            <div className="w-12 h-12 rounded-xl bg-[#FAF8F3] border border-[#DFAE24]/30 flex items-center justify-center mb-6 shadow-sm">
+              <FaBullseye className="text-[#B88E1C] w-6 h-6" />
             </div>
-            <h3 className="text-2xl font-bold font-heading text-primary-dark mb-4">Our Mission</h3>
-            <ul className="space-y-3.5 text-xs md:text-sm text-slate-600 leading-relaxed font-medium">
+            <h3 className="text-2xl font-bold font-heading mb-4 text-[#26130D]">Our Mission</h3>
+            <ul className="space-y-3.5 text-xs md:text-sm text-[#211A17] font-medium leading-relaxed font-body">
               {missionPoints.map((point, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <span className="text-amber-600 font-bold shrink-0">✔</span>
+                  <span className="text-[#B88E1C] font-extrabold shrink-0">✔</span>
                   <span>{point}</span>
                 </li>
               ))}

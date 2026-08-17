@@ -10,7 +10,7 @@ const Placements = () => {
   const careerFeature = SPECIAL_FEATURES.find(f => f.title === "Career Counseling");
 
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Career Guidance & Placement Support" subtitle="Career Cell" />
 

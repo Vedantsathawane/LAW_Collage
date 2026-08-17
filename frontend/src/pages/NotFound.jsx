@@ -7,7 +7,7 @@ import Button from '../components/common/Button';
 
 const NotFound = () => {
   return (
-    <div className="min-h-[80vh] flex items-center justify-center bg-slate-50 font-body py-16">
+    <div className="min-h-[80vh] flex items-center justify-center bg-[#FAF8F3] font-body py-16">
       <Container className="text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

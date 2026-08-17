@@ -9,7 +9,7 @@ const News = () => {
   const [activeNews, setActiveNews] = useState(null);
 
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Latest Campus News & Highlights" subtitle="Student Corner" centered={true} />
 

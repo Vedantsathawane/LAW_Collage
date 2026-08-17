@@ -9,7 +9,7 @@ const AntiRagging = () => {
   const members = COMMITTEE_MEMBERS.filter(m => m.committee.includes("Anti-Ragging"));
 
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Zero Tolerance: Anti-Ragging Guidelines" subtitle="Anti-Ragging Squad" centered={true} />
 

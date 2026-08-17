@@ -25,7 +25,7 @@ const GrievanceCell = () => {
   };
 
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Student Grievance Redressal Cell" subtitle="Grievance Cell" centered={true} />
 

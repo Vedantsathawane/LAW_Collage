@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaBalanceScale, FaGraduationCap, FaBookOpen, FaUserTie, FaArrowRight, 
   FaArrowLeft, FaQuoteLeft, FaCheckCircle, FaLandmark, 
-  FaGavel, FaHandsHelping, FaUserShield, FaVolumeUp, FaTimes, FaMapMarkerAlt
+  FaGavel, FaHandsHelping, FaUserShield, FaVolumeUp, FaTimes, FaMapMarkerAlt, FaExternalLinkAlt
 } from 'react-icons/fa';
 import Container from '../components/common/Container';
 import SectionTitle from '../components/common/SectionTitle';
@@ -12,7 +12,7 @@ import Card from '../components/ui/Card';
 import Accordion from '../components/ui/Accordion';
 import { FAQS, SPECIAL_FEATURES, COURSES, NOTICES, LOCATION_DETAILS, LIBRARY_INFO } from '../data/mockData';
 import useHeroSlider from '../hooks/useHeroSlider';
-import { INSTITUTION_NAME } from '../config/institutionConfig';
+import { INSTITUTION_NAME, openGoogleForm } from '../config/institutionConfig';
 import heroLaw1 from '../assets/hero-law-1.jpg';
 import heroLaw2 from '../assets/hero-law-2.jpg';
 import heroLaw3 from '../assets/hero-law-3.jpg';
@@ -309,9 +309,13 @@ const Home = () => {
                     <span>View Syllabus Details</span>
                     <FaArrowRight className="w-3 h-3" />
                   </Link>
-                  <Link to="/admission/apply" className="bg-[#26130D] hover:bg-[#3D2017] text-[#DFAE24] text-xs font-bold px-4 py-2 rounded-xl transition-all">
-                    Apply Now
-                  </Link>
+                  <button
+                    onClick={openGoogleForm}
+                    className="bg-[#26130D] hover:bg-[#3D2017] text-[#DFAE24] text-xs font-bold px-4 py-2 rounded-xl transition-all flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <span>Apply Now</span>
+                    <FaExternalLinkAlt className="w-3 h-3" />
+                  </button>
                 </div>
               </div>
             ))}
@@ -627,14 +631,16 @@ const Home = () => {
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+              <button
+                onClick={openGoogleForm}
+                className="bg-[#DFAE24] hover:bg-[#F4C430] text-[#26130D] font-extrabold text-xs md:text-sm px-6 py-3.5 rounded-xl shadow-lg flex items-center gap-2 cursor-pointer"
+              >
+                <span>Apply Now (Google Form)</span>
+                <FaExternalLinkAlt className="w-3.5 h-3.5" />
+              </button>
               <Link to="/admission/apply">
-                <button className="bg-[#DFAE24] hover:bg-[#F4C430] text-[#26130D] font-extrabold text-xs md:text-sm px-6 py-3.5 rounded-xl shadow-lg cursor-pointer">
-                  View Admissions
-                </button>
-              </Link>
-              <Link to="/contact">
                 <button className="bg-[#26130D] hover:bg-[#3D2017] text-[#FAF8F3] border-2 border-[#DFAE24] font-bold text-xs md:text-sm px-6 py-3.5 rounded-xl shadow-md cursor-pointer">
-                  Contact College
+                  Admission Portal & Requirements
                 </button>
               </Link>
             </div>

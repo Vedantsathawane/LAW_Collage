@@ -105,7 +105,6 @@
 /* Double-border gradient wrapper */
 .gradient-border-box {
   position: relative;
-  background: white;
   background-clip: padding-box;
   border: 1px solid transparent;
 }

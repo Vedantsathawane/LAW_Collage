@@ -13,25 +13,29 @@ const Hostel = () => {
   ];
 
   return (
-    <div className="pt-24 pb-16 bg-slate-50 font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
       <Container>
         <SectionTitle title="Residential Student Hostels" subtitle="Hostel Info" centered={true} />
 
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Blocks overview */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="p-6 bg-gradient-to-tr from-primary to-primary-light text-white border-none text-center" hoverEffect={false}>
-              <h3 className="text-lg font-bold font-heading text-white">Boys Hostel Block</h3>
-              <p className="text-xs text-slate-200 mt-2">Cap: 250 Beds • Double Sharing Rooms</p>
-              <div className="border-t border-white/10 mt-4 pt-3 text-xs text-secondary font-bold">
+            <Card className="p-6 bg-white border border-[#DFAE24]/40 shadow-premium relative overflow-hidden text-center" hoverEffect={false}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#DFAE24]/15 rounded-full blur-xl pointer-events-none -mr-8 -mt-8" />
+              <span className="text-[10px] font-bold text-[#B88E1C] uppercase tracking-widest font-heading">Boys Residence</span>
+              <h3 className="text-lg font-bold font-heading text-[#26130D] mt-1">Boys Hostel Block</h3>
+              <p className="text-xs text-[#211A17] font-semibold mt-2">Cap: 250 Beds • Double Sharing Rooms</p>
+              <div className="border border-[#DFAE24]/30 bg-[#FAF8F3] rounded-xl mt-4 p-3 text-xs text-[#26130D] font-extrabold">
                 Fee: ₹42,000 / Year (Mess Inclusive)
               </div>
             </Card>
 
-            <Card className="p-6 bg-white border border-slate-100 shadow-premium text-center" hoverEffect={false}>
-              <h3 className="text-lg font-bold font-heading text-primary-dark">Girls Hostel Block</h3>
-              <p className="text-xs text-slate-500 mt-2">Cap: 200 Beds • Single & Double Rooms</p>
-              <div className="border-t border-slate-100 mt-4 pt-3 text-xs text-primary font-bold">
+            <Card className="p-6 bg-white border border-[#DFAE24]/40 shadow-premium relative overflow-hidden text-center" hoverEffect={false}>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#DFAE24]/15 rounded-full blur-xl pointer-events-none -mr-8 -mt-8" />
+              <span className="text-[10px] font-bold text-[#B88E1C] uppercase tracking-widest font-heading">Girls Residence</span>
+              <h3 className="text-lg font-bold font-heading text-[#26130D] mt-1">Girls Hostel Block</h3>
+              <p className="text-xs text-[#211A17] font-semibold mt-2">Cap: 200 Beds • Single & Double Rooms</p>
+              <div className="border border-[#DFAE24]/30 bg-[#FAF8F3] rounded-xl mt-4 p-3 text-xs text-[#26130D] font-extrabold">
                 Fee: ₹42,000 / Year (Mess Inclusive)
               </div>
             </Card>
