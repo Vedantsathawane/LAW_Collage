@@ -1,65 +1,99 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaGraduationCap, FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaExternalLinkAlt } from 'react-icons/fa';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
 import Card from '../../components/ui/Card';
 import { COURSES } from '../../data/mockData';
-import { INSTITUTION_NAME } from '../../config/institutionConfig';
+import { INSTITUTION_NAME, openGoogleForm } from '../../config/institutionConfig';
 
 const Departments = () => {
   return (
-    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
+    <div className="pt-24 pb-16 bg-[#FAF8F3] font-body min-h-screen">
       <Container>
         <SectionTitle
-          title="Academic Programs"
-          subtitle="Academics"
+          title="ACADEMIC PROGRAMS"
+          subtitle="Degree Courses"
           centered={true}
         />
 
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="text-center text-slate-600 text-sm md:text-base leading-relaxed mb-8">
+        <div className="max-w-5xl mx-auto space-y-8">
+          <div className="text-center text-[#756D63] text-xs md:text-sm font-medium leading-relaxed max-w-3xl mx-auto mb-10">
             <p>
-              <strong>{INSTITUTION_NAME}</strong> offers the following degree programs approved by the Bar Council of India (BCI) / State Government of Maharashtra and affiliated with Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU).
+              <strong className="text-[#26130D]">{INSTITUTION_NAME}</strong> offers the following degree programs approved by the Bar Council of India (BCI) / State Government of Maharashtra and affiliated with Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU).
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {COURSES.map((course) => (
-              <Card key={course.id} className="p-6 bg-white border border-slate-100 shadow-premium flex flex-col justify-between" hoverEffect={true}>
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/5 flex items-center justify-center text-primary shrink-0">
-                      <FaGraduationCap className="w-5 h-5" />
-                    </div>
+              <Card
+                key={course.id}
+                className="p-6 md:p-8 bg-white border border-[#DFAE24]/40 shadow-premium flex flex-col justify-between relative overflow-hidden rounded-2xl group"
+                hoverEffect={true}
+              >
+                {/* Gold corner accent blob */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FAF8F3] rounded-bl-full pointer-events-none group-hover:scale-105 transition-transform border-b border-l border-[#DFAE24]/20" />
+
+                <div className="relative z-10">
+                  {/* Top program number & label */}
+                  <div className="flex items-center gap-3.5 mb-4">
+                    <span className="text-3xl md:text-4xl font-extrabold font-heading text-[#B88E1C] leading-none">
+                      {course.id === 'llb-3yr' ? '03' : '05'}
+                    </span>
                     <div>
-                      <h3 className="text-base md:text-lg font-bold font-heading text-primary-dark">
+                      <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#B88E1C] block font-heading">
+                        YEAR PROGRAM
+                      </span>
+                      <h3 className="text-lg md:text-xl font-bold font-heading text-[#26130D]">
                         {course.name}
                       </h3>
-                      <span className="text-[10px] font-bold text-secondary uppercase">{course.level}</span>
                     </div>
                   </div>
-                  
-                  <p className="text-xs md:text-sm text-slate-500 leading-relaxed mb-4">
+
+                  {/* Course Description */}
+                  <p className="text-xs md:text-sm text-[#756D63] font-medium leading-relaxed my-5 font-body">
                     {course.description}
                   </p>
 
-                  <div className="grid grid-cols-2 gap-3 text-xs text-slate-500 bg-slate-50 border border-slate-100 rounded-xl p-3">
+                  {/* Duration & Sanctioned Intake Box */}
+                  <div className="grid grid-cols-2 gap-4 bg-[#FAF8F3] p-4 rounded-xl border border-[#DFAE24]/30 mb-6 text-xs">
                     <div>
-                      <span className="font-bold text-slate-400 text-[10px] uppercase block">Duration</span>
-                      <span className="font-semibold text-primary">{course.duration}</span>
+                      <span className="font-extrabold text-[#756D63] text-[10px] uppercase tracking-wider block mb-0.5 font-heading">
+                        DURATION
+                      </span>
+                      <span className="font-bold text-[#26130D] text-xs md:text-sm">
+                        {course.duration}
+                      </span>
                     </div>
                     <div>
-                      <span className="font-bold text-slate-400 text-[10px] uppercase block">Intake</span>
-                      <span className="font-semibold text-primary">{course.intake} Seats</span>
+                      <span className="font-extrabold text-[#756D63] text-[10px] uppercase tracking-wider block mb-0.5 font-heading">
+                        SANCTIONED INTAKE
+                      </span>
+                      <span className="font-bold text-[#26130D] text-xs md:text-sm">
+                        {course.intake} Seats
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                <Link to="/academics/courses" className="mt-6 text-xs font-bold text-primary hover:text-accent flex items-center gap-1">
-                  <span>View Full Syllabus</span>
-                  <FaArrowRight className="w-2.5 h-2.5" />
-                </Link>
+                {/* Footer Action Links */}
+                <div className="flex items-center justify-between border-t border-[#DFAE24]/20 pt-4 mt-auto relative z-10">
+                  <Link
+                    to="/academics/courses"
+                    className="text-xs font-bold text-[#26130D] hover:text-[#B88E1C] flex items-center gap-1.5 transition-colors"
+                  >
+                    <span>View Syllabus Details</span>
+                    <FaArrowRight className="w-3 h-3 text-[#B88E1C]" />
+                  </Link>
+
+                  <button
+                    onClick={openGoogleForm}
+                    className="bg-[#26130D] hover:bg-[#3D2017] text-[#DFAE24] text-xs font-extrabold px-5 py-2.5 rounded-xl shadow-md border border-[#DFAE24]/40 flex items-center gap-1.5 cursor-pointer transition-all shrink-0"
+                  >
+                    <span>Apply Now</span>
+                    <FaExternalLinkAlt className="w-3 h-3" />
+                  </button>
+                </div>
               </Card>
             ))}
           </div>
