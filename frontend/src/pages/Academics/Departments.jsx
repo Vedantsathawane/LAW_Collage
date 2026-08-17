@@ -55,10 +55,10 @@ const Departments = () => {
                     {course.description}
                   </p>
 
-                  {/* Duration & Sanctioned Intake Box */}
+                  {/* Duration & Sanctioned Intake Box - Gold headers matching 3rd image */}
                   <div className="grid grid-cols-2 gap-4 bg-[#FAF8F3] p-4 rounded-xl border border-[#DFAE24]/30 mb-6 text-xs">
                     <div>
-                      <span className="font-extrabold text-[#756D63] text-[10px] uppercase tracking-wider block mb-0.5 font-heading">
+                      <span className="font-extrabold text-[#B88E1C] text-[10px] uppercase tracking-wider block mb-0.5 font-heading">
                         DURATION
                       </span>
                       <span className="font-bold text-[#26130D] text-xs md:text-sm">
@@ -66,7 +66,7 @@ const Departments = () => {
                       </span>
                     </div>
                     <div>
-                      <span className="font-extrabold text-[#756D63] text-[10px] uppercase tracking-wider block mb-0.5 font-heading">
+                      <span className="font-extrabold text-[#B88E1C] text-[10px] uppercase tracking-wider block mb-0.5 font-heading">
                         SANCTIONED INTAKE
                       </span>
                       <span className="font-bold text-[#26130D] text-xs md:text-sm">
@@ -91,7 +91,7 @@ const Departments = () => {
                     className="bg-[#26130D] hover:bg-[#3D2017] text-[#DFAE24] text-xs font-extrabold px-5 py-2.5 rounded-xl shadow-md border border-[#DFAE24]/40 flex items-center gap-1.5 cursor-pointer transition-all shrink-0"
                   >
                     <span>Apply Now</span>
-                    <FaExternalLinkAlt className="w-3 h-3" />
+                    <FaExternalLinkAlt className="w-3 h-3 text-[#DFAE24]" />
                   </button>
                 </div>
               </Card>
