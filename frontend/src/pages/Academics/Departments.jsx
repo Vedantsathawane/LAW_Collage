@@ -31,8 +31,8 @@ const Departments = () => {
                 className="p-6 md:p-8 bg-white border border-[#DFAE24]/40 shadow-premium flex flex-col justify-between relative overflow-hidden rounded-2xl group"
                 hoverEffect={true}
               >
-                {/* Gold corner accent blob */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FAF8F3] rounded-bl-full pointer-events-none group-hover:scale-105 transition-transform border-b border-l border-[#DFAE24]/20" />
+                {/* Warm Gold corner accent blob (compact size so words are never hidden) */}
+                <div className="absolute top-0 right-0 w-24 h-24 sm:w-28 sm:h-28 bg-[#F4ECDA] rounded-bl-full pointer-events-none group-hover:scale-105 transition-transform border-b border-l border-[#DFAE24]/30 z-0" />
 
                 <div className="relative z-10">
                   {/* Top program number & label */}

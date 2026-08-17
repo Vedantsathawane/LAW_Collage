@@ -275,7 +275,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {COURSES.map((course) => (
               <div key={course.id} className="p-8 bg-white border border-[#DFAE24]/30 rounded-2xl shadow-premium flex flex-col justify-between relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-28 h-28 bg-[#DFAE24]/10 rounded-bl-full pointer-events-none group-hover:scale-110 transition-transform" />
+                <div className="absolute top-0 right-0 w-24 h-24 sm:w-28 sm:h-28 bg-[#F4ECDA] rounded-bl-full pointer-events-none group-hover:scale-105 transition-transform border-b border-l border-[#DFAE24]/30 z-0" />
 
                 <div>
                   <div className="flex items-center gap-3 mb-4">
