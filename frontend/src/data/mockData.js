@@ -64,23 +64,68 @@ export const NOTICES = [
   {
     id: "notice-1",
     title: "Admissions Open 2026-27 for LL.B. 3 Years & 5 Years Semester Courses — BCI & RTMNU Approved",
-    date: "Session 2026-27",
+    category: "Admissions",
+    description: "Online application portal for session 2026-27 is now open. Sanctioned intake capacity is strictly limited to 60 seats per course under RTMNU & Bar Council of India norms.",
+    date: "Aug 15, 2026",
+    issuer: "Admission Cell",
     priority: "high",
-    link: "/admission/procedure"
+    link: "/admission/apply",
+    isNew: true
   },
   {
     id: "notice-2",
     title: "Prospectus & Academic Guidelines Handbook Available — Download from Student Corner",
-    date: "Academic Year",
+    category: "Academic",
+    description: "Download the official institutional prospectus, semester syllabus scheme, examination rules, and student code of conduct for session 2026-27.",
+    date: "Aug 10, 2026",
+    issuer: "Academic Dept",
     priority: "normal",
-    link: "/student-corner/downloads"
+    link: "/student-corner/downloads",
+    isNew: true
   },
   {
     id: "notice-3",
-    title: "Compulsory Attendance: 75% Attendance mandatory in all subjects as per BCI & RTMNU Regulations",
-    date: "Important Rule",
+    title: "Compulsory Attendance: 75% Attendance Mandatory in All Subjects as per BCI & RTMNU Regulations",
+    category: "Regulatory",
+    description: "75% lecture attendance is strictly mandatory in every semester subject. Shortage of attendance will result in exam debarment as per university guidelines.",
+    date: "Aug 05, 2026",
+    issuer: "Principal's Office",
     priority: "high",
-    link: "/student-corner/rules"
+    link: "/student-corner/examination",
+    isNew: false
+  },
+  {
+    id: "notice-4",
+    title: "Moot Court Association Selection Trials & Orientation Workshop for 2026-27",
+    category: "Events",
+    description: "Annual selection trials for DMYCL Moot Court Society will commence on Aug 25. Mandatory participation for 3-Year (Sem I) & 5-Year (Sem V) students.",
+    date: "Jul 28, 2026",
+    issuer: "Moot Court Cell",
+    priority: "normal",
+    link: "/academics/training",
+    isNew: false
+  },
+  {
+    id: "notice-5",
+    title: "Government Post-Matric & Merit-cum-Means Scholarship Portal Applications",
+    category: "Scholarships",
+    description: "Eligible SC, ST, OBC, VJNT, and EWS category students must submit online scholarship applications before the upcoming state deadline.",
+    date: "Jul 20, 2026",
+    issuer: "Scholarship Cell",
+    priority: "high",
+    link: "/admission/scholarship",
+    isNew: false
+  },
+  {
+    id: "notice-6",
+    title: "Submission of RTMNU Winter Semester Examination Forms & Fee Payment Guidelines",
+    category: "Exams",
+    description: "All regular and ex-students are instructed to fill out university examination forms along with fee clearance receipts at administrative counter #2.",
+    date: "Jul 12, 2026",
+    issuer: "Exam Department",
+    priority: "normal",
+    link: "/student-corner/examination",
+    isNew: false
   }
 ];
 export const NEWS = [];
