@@ -107,15 +107,9 @@ const Notices = () => {
                   hoverEffect={true}
                 >
                   <div className="flex items-start gap-4 min-w-0 flex-1">
-                    {/* Left Icon Container (Black & Gold Theme) */}
-                    <div
-                      className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm border transition-all ${
-                        isHighPriority
-                          ? 'bg-[#26130D] border-[#DFAE24] text-[#DFAE24]'
-                          : 'bg-[#26130D]/90 border-[#DFAE24]/40 text-[#DFAE24]'
-                      }`}
-                    >
-                      <FaBell className={`w-5 h-5 text-[#DFAE24] ${isHighPriority ? 'animate-pulse' : ''}`} />
+                    {/* Left Icon Container (Strict Black & Gold Theme) */}
+                    <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-md bg-[#26130D] border-2 border-[#DFAE24] transition-transform group-hover:scale-105">
+                      <FaBell className={`w-5.5 h-5.5 text-[#DFAE24] ${isHighPriority ? 'animate-pulse' : ''}`} />
                     </div>
 
                     {/* Notice Info Container */}
