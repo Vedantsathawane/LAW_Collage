@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import Loader from '../components/common/Loader';
 
@@ -30,6 +30,7 @@ const AntiRagging = lazy(() => import('../pages/Academics/AntiRagging'));
 const GrievanceCell = lazy(() => import('../pages/Academics/GrievanceCell'));
 
 // Admission Pages
+const Admission = lazy(() => import('../pages/Admission/Admission'));
 const Procedure = lazy(() => import('../pages/Admission/Procedure'));
 const Fees = lazy(() => import('../pages/Admission/Fees'));
 const Scholarship = lazy(() => import('../pages/Admission/Scholarship'));
@@ -73,6 +74,7 @@ const AppRoutes = () => {
           <Route path="about/administration" element={<Administration />} />
 
           {/* Academics Paths */}
+          <Route path="academics" element={<Navigate to="/academics/departments" replace />} />
           <Route path="academics/departments" element={<Departments />} />
           <Route path="academics/courses" element={<Courses />} />
           <Route path="academics/faculty" element={<Faculty />} />
@@ -88,12 +90,16 @@ const AppRoutes = () => {
           <Route path="academics/grievance-cell" element={<GrievanceCell />} />
 
           {/* Admission Paths */}
+          <Route path="admission" element={<Admission />} />
+          <Route path="admissions" element={<Admission />} />
           <Route path="admission/procedure" element={<Procedure />} />
           <Route path="admission/fees" element={<Fees />} />
           <Route path="admission/scholarship" element={<Scholarship />} />
           <Route path="admission/apply" element={<Apply />} />
 
           {/* Student Corner Paths */}
+          <Route path="student-corner" element={<Navigate to="/student-corner/campus-facilities" replace />} />
+          <Route path="student-life" element={<Navigate to="/student-corner/campus-facilities" replace />} />
           <Route path="student-corner/examination" element={<Examination />} />
           <Route path="student-corner/downloads" element={<Downloads />} />
           <Route path="student-corner/news" element={<News />} />
