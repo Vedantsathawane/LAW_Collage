@@ -107,15 +107,15 @@ const Notices = () => {
                   hoverEffect={true}
                 >
                   <div className="flex items-start gap-4 min-w-0 flex-1">
-                    {/* Left Icon Container */}
+                    {/* Left Icon Container (Black & Gold Theme) */}
                     <div
-                      className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-xs border ${
+                      className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 shadow-sm border transition-all ${
                         isHighPriority
-                          ? 'bg-red-50 border-red-200 text-red-600'
-                          : 'bg-[#FAF8F3] border-[#DFAE24]/40 text-[#B88E1C]'
+                          ? 'bg-[#26130D] border-[#DFAE24] text-[#DFAE24]'
+                          : 'bg-[#26130D]/90 border-[#DFAE24]/40 text-[#DFAE24]'
                       }`}
                     >
-                      <FaBell className={`w-5 h-5 ${isHighPriority ? 'animate-bounce text-red-600' : ''}`} />
+                      <FaBell className={`w-5 h-5 text-[#DFAE24] ${isHighPriority ? 'animate-pulse' : ''}`} />
                     </div>
 
                     {/* Notice Info Container */}
@@ -128,7 +128,7 @@ const Notices = () => {
                           </span>
                         )}
                         {n.isNew && (
-                          <span className="px-2 py-0.5 rounded-md text-[9px] font-black uppercase tracking-widest bg-red-600 text-white animate-pulse">
+                          <span className="px-2.5 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-widest bg-[#DFAE24] text-[#26130D] border border-[#B88E1C]/40 shadow-xs">
                             NEW
                           </span>
                         )}
