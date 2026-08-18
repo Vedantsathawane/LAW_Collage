@@ -130,32 +130,39 @@ const SearchDrawer = ({ isOpen, onClose }) => {
                   No matching courses or departments found for "{query}"
                 </div>
               ) : (
-                <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div className="mt-8 grid grid-cols-2 md:grid-cols-5 gap-3 text-center">
                   <Link
                     to="/academics/departments"
                     onClick={onClose}
-                    className="p-4 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all font-medium text-xs md:text-sm text-primary"
+                    className="p-3.5 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all font-medium text-xs md:text-sm text-primary"
                   >
                     View Departments
                   </Link>
                   <Link
                     to="/academics/courses"
                     onClick={onClose}
-                    className="p-4 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all font-medium text-xs md:text-sm text-primary"
+                    className="p-3.5 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all font-medium text-xs md:text-sm text-primary"
                   >
                     Explore Courses
                   </Link>
                   <Link
+                    to="/cet"
+                    onClick={onClose}
+                    className="p-3.5 bg-[#FAF8F3] hover:bg-[#F5F0E6] rounded-xl border border-[#DFAE24]/40 transition-all font-bold text-xs md:text-sm text-[#26130D]"
+                  >
+                    CET Results
+                  </Link>
+                  <Link
                     to="/admission/procedure"
                     onClick={onClose}
-                    className="p-4 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all font-medium text-xs md:text-sm text-primary"
+                    className="p-3.5 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all font-medium text-xs md:text-sm text-primary"
                   >
                     Admission Guide
                   </Link>
                   <Link
                     to="/student-corner/downloads"
                     onClick={onClose}
-                    className="p-4 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all font-medium text-xs md:text-sm text-primary"
+                    className="p-3.5 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all font-medium text-xs md:text-sm text-primary"
                   >
                     Syllabus PDFs
                   </Link>

@@ -11,6 +11,10 @@ const Breadcrumb = () => {
 
   // Map path chunks to clean user-facing titles
   const formatName = (name) => {
+    const uppercaseAcronyms = ['cet', 'nss', 'ncc', 'iqac', 'naac', 'nirf', 'rti'];
+    if (uppercaseAcronyms.includes(name.toLowerCase())) {
+      return name.toUpperCase();
+    }
     return name
       .replace(/-/g, ' ')
       .replace(/(^\w|\s\w)/g, (m) => m.toUpperCase());
