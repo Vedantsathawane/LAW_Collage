@@ -6,7 +6,7 @@ export const INSTITUTION_EMAIL_DOMAIN = "dmycl.edu.in";
 export const INSTITUTION_AFFILIATION = "Approved by Bar Council of India / State Govt. | Affiliated with Rashtrasant Tukadoji Maharaj Nagpur University";
 export const INSTITUTION_COURSES = "LL.B. 3 and 5 Years Semester Course";
 export const LOCATION = "Pauni, Dist. Bhandara, Maharashtra";
-export const PHONE_PRIMARY = "+91-94221-55100";
+export const PHONE_PRIMARY = "+91-92849-74125";
 export const ADDRESS = "Dr. Milind Yerne College of Law, Pauni, Dist. Bhandara, Maharashtra - 441910";
 export const DEVELOPED_BY = "Vedant Sathawane & Team";
 

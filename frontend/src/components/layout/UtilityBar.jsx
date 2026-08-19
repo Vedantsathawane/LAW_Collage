@@ -13,9 +13,9 @@ const UtilityBar = () => {
             {INSTITUTION_NAME}
           </span>
           <span className="text-[#DFAE24]/40">|</span>
-          <a href="tel:+919422155100" className="flex items-center gap-1.5 hover:text-[#DFAE24] transition-colors group">
+          <a href="tel:+919284974125" className="flex items-center gap-1.5 hover:text-[#DFAE24] transition-colors group">
             <FaPhoneAlt className="text-[#DFAE24] w-2.5 h-2.5" />
-            <span>+91-94221-55100</span>
+            <span>+91-92849-74125</span>
           </a>
           <a href="mailto:info@dmycl.edu.in" className="flex items-center gap-1.5 hover:text-[#DFAE24] transition-colors group">
             <FaEnvelope className="text-[#DFAE24] w-2.5 h-2.5" />
