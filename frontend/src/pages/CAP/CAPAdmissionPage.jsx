@@ -481,9 +481,14 @@ const CAPAdmissionPage = () => {
                     </p>
                   </div>
 
-                  <div className="bg-[#43230F] p-3 rounded-xl border border-[#DFAE24]/20 text-xs text-[#FAF8F3] font-medium whitespace-nowrap">
-                    <p>Parallel Vacancy : <strong className="text-[#DFAE24]">( PH - 0 ), (Defence - 2), (Orphan - 0)</strong></p>
-                    <p className="text-[11px] text-gray-300 mt-0.5">As of Date : <strong>30/09/2026</strong></p>
+                  <div className="bg-[#43230F] p-3 rounded-xl border border-[#DFAE24]/20 text-xs text-[#FAF8F3] font-medium">
+                    <div className="flex flex-wrap items-center gap-1.5 leading-relaxed">
+                      <span className="font-bold text-[#FAF8F3]">Parallel Vacancy:</span>
+                      <span className="text-[#DFAE24] font-extrabold bg-white/10 px-2 py-0.5 rounded border border-[#DFAE24]/30 text-[11px]">PH - 0</span>
+                      <span className="text-[#DFAE24] font-extrabold bg-white/10 px-2 py-0.5 rounded border border-[#DFAE24]/30 text-[11px]">Defence - 2</span>
+                      <span className="text-[#DFAE24] font-extrabold bg-white/10 px-2 py-0.5 rounded border border-[#DFAE24]/30 text-[11px]">Orphan - 0</span>
+                    </div>
+                    <p className="text-[11px] text-gray-300 mt-1">As of Date : <strong>30/09/2026</strong></p>
                   </div>
                 </div>
               </div>
