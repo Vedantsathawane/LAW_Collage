@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link as RouterLink } from 'react-router-dom';
 import {
   FaGraduationCap,
@@ -50,14 +51,61 @@ const Admission = () => {
     }
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Dr. Milind Yerne College of Law approved by BCI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Dr. Milind Yerne College of Law, Kosra (Pauni, Bhandara) is approved by the Bar Council of India (BCI), New Delhi and affiliated with Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What courses are offered for law admissions in Bhandara?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer 3-Year LL.B. (for graduates) and 5-Year B.A. LL.B. (for 10+2 / 12th pass students) with a sanctioned intake of 60 seats per course."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to apply for law admission in Maharashtra?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Candidates must appear for the State Common Entrance Test (MH CET Law) and participate in the Centralized Admission Process (CAP) rounds."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="pt-24 pb-16 bg-[#FAF8F3] font-body min-h-screen">
+      <Helmet>
+        <title>Law Admission 2026-27 Bhandara | Dr Milind Yerne Law College</title>
+        <meta name="description" content="Apply for LL.B 3-Year & B.A. LL.B 5-Year admission 2026-27 at Dr. Milind Yerne College of Law, Bhandara. Check eligibility, MH CET Law CAP rounds, documents & fee structure." />
+        <meta name="keywords" content="law college admission Bhandara, BA LLB admission Maharashtra 2026, LLB admission near Nagpur, MH CET Law CAP rounds, law course fees Bhandara" />
+        <link rel="canonical" href="https://drmycollegeoflaw.org/admission" />
+        <meta property="og:title" content="Law Admission 2026-27 Bhandara | Dr Milind Yerne Law College" />
+        <meta property="og:description" content="Admission guidelines for LL.B 3-Year and 5-Year B.A. LL.B degree courses at Dr. Milind Yerne College of Law, Pauni Tehsil, Bhandara District." />
+        <meta property="og:url" content="https://drmycollegeoflaw.org/admission" />
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
+
       <Container>
-        <SectionTitle
-          title="LAW ADMISSIONS 2026-27"
-          subtitle="Admissions Overview"
-          centered={true}
-        />
+        <div className="text-center mb-8">
+          <h1 className="text-2xl md:text-4xl font-extrabold font-heading text-[#26130D]">
+            Law College Admissions 2026-27: LL.B. 3-Year & B.A. LL.B. 5-Year
+          </h1>
+          <p className="text-xs md:text-sm text-[#B88E1C] font-semibold mt-2">
+            Dr. Milind Yerne College of Law, Kosra, Pauni Tehsil, Bhandara District
+          </p>
+        </div>
 
         {/* 60-Seat Notice Banner */}
         <div className="max-w-5xl mx-auto mb-12 p-6 md:p-8 rounded-2xl bg-[#26130D] border-2 border-[#DFAE24] text-[#FAF8F3] shadow-xl relative overflow-hidden">
@@ -113,9 +161,9 @@ const Admission = () => {
                     {item.badge}
                   </span>
                 </div>
-                <h3 className="text-lg font-bold font-heading text-[#26130D]">
+                <h2 className="text-lg font-bold font-heading text-[#26130D]">
                   {item.title}
-                </h3>
+                </h2>
                 <p className="text-xs text-[#756D63] leading-relaxed font-medium">
                   {item.description}
                 </p>
@@ -135,9 +183,9 @@ const Admission = () => {
         {/* Programs & Intake Section */}
         <div className="max-w-5xl mx-auto mb-16">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold font-heading text-[#26130D]">
+            <h2 className="text-2xl font-bold font-heading text-[#26130D]">
               Programs Offered & Intake Capacity
-            </h3>
+            </h2>
             <p className="text-xs md:text-sm text-[#756D63] mt-1 font-medium">
               Affiliated with Rashtrasant Tukadoji Maharaj Nagpur University & Approved by Bar Council of India (BCI)
             </p>
@@ -154,7 +202,7 @@ const Admission = () => {
                       {course.intake} Seats Sanctioned
                     </span>
                   </div>
-                  <h4 className="text-xl font-bold font-heading text-[#26130D]">{course.name}</h4>
+                  <h3 className="text-xl font-bold font-heading text-[#26130D]">{course.name}</h3>
                   <div className="space-y-2 text-xs text-[#756D63]">
                     <p className="font-semibold text-[#211A17]"><strong>Duration:</strong> {course.duration}</p>
                     <p className="font-semibold text-[#211A17]"><strong>Eligibility:</strong> {course.eligibility}</p>
@@ -185,9 +233,9 @@ const Admission = () => {
         {/* Admission Contact & Helpline Banner */}
         <div className="max-w-5xl mx-auto p-6 md:p-8 bg-white border border-[#DFAE24]/40 rounded-2xl shadow-premium flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
-            <h4 className="text-lg font-bold font-heading text-[#26130D]">
+            <h3 className="text-lg font-bold font-heading text-[#26130D]">
               Need Help with Admissions?
-            </h4>
+            </h3>
             <p className="text-xs text-[#756D63] font-medium">
               Contact our admission cell for counseling, documents verification, or fee details.
             </p>

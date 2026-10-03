@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -55,6 +56,12 @@ const Home = () => {
 
   return (
     <div className="bg-[#FAF8F3] text-[#211A17] font-body select-none overflow-hidden noise-bg">
+      <Helmet>
+        <title>Dr. Milind Yerne College of Law Bhandara | BCI Approved LL.B. College</title>
+        <meta name="description" content="Dr. Milind Yerne College of Law, Kosra (Pauni, Bhandara) is a top BCI approved & RTMNU affiliated law college offering 3-Year LL.B & 5-Year B.A. LL.B courses. Admissions Open 2026-27." />
+        <meta name="keywords" content="law college in Bhandara, LLB college Bhandara, BA LLB admission Maharashtra, best law college near Nagpur, Dr Milind Yerne College of Law" />
+        <link rel="canonical" href="https://drmycollegeoflaw.org/" />
+      </Helmet>
 
       {/* ============================================================
           03 — HERO SECTION (EXACT COLOR SWATCH #26130D & NATURAL UNTINTED CRISP HERO IMAGE)

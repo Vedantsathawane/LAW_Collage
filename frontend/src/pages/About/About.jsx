@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaBalanceScale, FaGraduationCap, FaMapMarkerAlt, FaAward } from 'react-icons/fa';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
@@ -17,12 +18,23 @@ const About = () => {
 
   return (
     <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
+      <Helmet>
+        <title>About Dr. Milind Yerne College of Law | Pauni, Bhandara</title>
+        <meta name="description" content="Learn about Dr. Milind Yerne College of Law, Kosra (Pauni, Bhandara). Established in 2007, BCI approved & affiliated with RTMNU Nagpur University offering LL.B. degree courses." />
+        <meta name="keywords" content="About Dr Milind Yerne Law College, law college in Bhandara, BCI approved college Pauni, RTMNU law college history" />
+        <link rel="canonical" href="https://drmycollegeoflaw.org/about" />
+        <meta property="og:title" content="About Dr. Milind Yerne College of Law | Pauni, Bhandara" />
+        <meta property="og:description" content="BCI Approved & RTMNU Affiliated Law College in Kosra, Pauni Tehsil, Bhandara District." />
+        <meta property="og:url" content="https://drmycollegeoflaw.org/about" />
+      </Helmet>
+
       <Container>
         {/* Banner */}
         <div className="relative h-[250px] md:h-[400px] rounded-3xl overflow-hidden mb-12 md:mb-16 select-none shadow-premium border border-[#DFAE24]/30">
           <img
             src={heroLaw1}
-            alt="Dr. Milind Yerne College of Law campus"
+            alt="Dr. Milind Yerne College of Law campus in Kosra Pauni Bhandara"
+            loading="lazy"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#26130D]/85 via-[#26130D]/60 to-transparent flex items-center p-8 md:p-16">
@@ -31,10 +43,10 @@ const About = () => {
                 Institutional Profile
               </span>
               <h1 className="text-3xl md:text-5xl font-bold font-heading mt-3 leading-tight text-white">
-                About Our College
+                About Dr. Milind Yerne College of Law
               </h1>
               <p className="text-xs md:text-sm text-[#FAF8F3]/90 mt-4 leading-relaxed font-body">
-                Professional legal education with the vision of "Education for All" since 2007.
+                Professional legal education with the vision of "Education for All" since 2007 in Bhandara district.
               </p>
             </div>
           </div>

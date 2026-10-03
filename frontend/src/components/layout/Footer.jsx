@@ -118,7 +118,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-[#DFAE24] w-4 h-4 shrink-0 mt-0.5" />
                 <span className="text-[#FAF8F3]/90 leading-relaxed">
-                  Dr. Milind Yerne College of Law, Pauni, Dist. Bhandara, Maharashtra - 441910
+                  Dr. Milind Yerne College of Law, Kosra, Kondha, Pauni Tehsil, Bhandara District, Maharashtra - 441908
                 </span>
               </li>
               <li className="flex items-center gap-3">

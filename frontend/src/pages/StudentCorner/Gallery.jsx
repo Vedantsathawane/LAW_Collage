@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaEye, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import Container from '../../components/common/Container';
@@ -18,8 +19,22 @@ const Gallery = () => {
 
   return (
     <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
+      <Helmet>
+        <title>Campus Gallery & Infrastructure | Dr Milind Yerne Law College Bhandara</title>
+        <meta name="description" content="View photo gallery of Dr. Milind Yerne College of Law, Pauni (Bhandara). Explore campus building, Moot Court hall, digital library, computer lab & sports grounds." />
+        <meta name="keywords" content="Dr Milind Yerne Law College campus photos, law college Bhandara gallery, moot court room photos Pauni" />
+        <link rel="canonical" href="https://drmycollegeoflaw.org/student-corner/gallery" />
+      </Helmet>
+
       <Container>
-        <SectionTitle title="Campus Photo Archives" subtitle="Student Corner" centered={true} />
+        <div className="text-center mb-8">
+          <h1 className="text-2xl md:text-4xl font-extrabold font-heading text-[#26130D]">
+            Campus Photos & Infrastructure Gallery
+          </h1>
+          <p className="text-xs md:text-sm text-[#B88E1C] font-semibold mt-2">
+            Dr. Milind Yerne College of Law, Kosra, Pauni, Bhandara
+          </p>
+        </div>
 
         {/* Categories Tab bar */}
         <div className="flex justify-center flex-wrap gap-2.5 mb-10 select-none">

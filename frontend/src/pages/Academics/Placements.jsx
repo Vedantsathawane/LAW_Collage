@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
@@ -11,8 +12,22 @@ const Placements = () => {
 
   return (
     <div className="pt-24 pb-16 bg-[#FAF8F3] font-body">
+      <Helmet>
+        <title>Placements & Career Opportunities | Dr Milind Yerne Law College Bhandara</title>
+        <meta name="description" content="Explore legal career guidance, judicial services coaching, advocacy practice & corporate placements at Dr. Milind Yerne College of Law, Pauni (Bhandara)." />
+        <meta name="keywords" content="law college placements Bhandara, legal career guidance Nagpur, JMFC judicial exam coaching, advocate career options LLB" />
+        <link rel="canonical" href="https://drmycollegeoflaw.org/academics/placements" />
+      </Helmet>
+
       <Container>
-        <SectionTitle title="Career Guidance & Placement Support" subtitle="Career Cell" />
+        <div className="text-center mb-8">
+          <h1 className="text-2xl md:text-4xl font-extrabold font-heading text-[#26130D]">
+            Career Guidance, Legal Practice & Placements
+          </h1>
+          <p className="text-xs md:text-sm text-[#B88E1C] font-semibold mt-2">
+            Dr. Milind Yerne College of Law, Pauni, Bhandara
+          </p>
+        </div>
 
         <div className="max-w-4xl mx-auto space-y-8">
           <Card className="p-6 md:p-8 bg-white border border-slate-100 shadow-premium" hoverEffect={false}>

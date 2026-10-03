@@ -80,6 +80,8 @@ const AppRoutes = () => {
           <Route path="academics" element={<Navigate to="/academics/departments" replace />} />
           <Route path="academics/departments" element={<Departments />} />
           <Route path="academics/courses" element={<Courses />} />
+          <Route path="academics/llb-3-years" element={<Courses />} />
+          <Route path="academics/ba-llb-5-years" element={<Courses />} />
           <Route path="academics/faculty" element={<Faculty />} />
           <Route path="academics/library" element={<Library />} />
           <Route path="academics/research" element={<Research />} />
