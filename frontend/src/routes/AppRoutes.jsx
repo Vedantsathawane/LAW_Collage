@@ -53,8 +53,9 @@ const Committees = lazy(() => import('../pages/StudentCorner/Committees'));
 const Alumni = lazy(() => import('../pages/StudentCorner/Alumni'));
 const Career = lazy(() => import('../pages/StudentCorner/Career'));
 
-// CET Page
+// CET & CAP Pages
 const CETPage = lazy(() => import('../pages/CET/CETPage'));
+const CAPAdmissionPage = lazy(() => import('../pages/CAP/CAPAdmissionPage'));
 
 // Contact & 404
 const Contact = lazy(() => import('../pages/Contact'));
@@ -102,8 +103,9 @@ const AppRoutes = () => {
           <Route path="admission/scholarship" element={<Scholarship />} />
           <Route path="admission/apply" element={<Apply />} />
 
-          {/* CET Route */}
+          {/* CET & CAP Routes */}
           <Route path="cet" element={<CETPage />} />
+          <Route path="cap-admission" element={<CAPAdmissionPage />} />
 
           {/* Student Corner Paths */}
           <Route path="student-corner" element={<Navigate to="/student-corner/campus-facilities" replace />} />

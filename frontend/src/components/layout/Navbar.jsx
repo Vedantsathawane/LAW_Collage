@@ -179,7 +179,7 @@ const Navbar = () => {
                 );
               })}
 
-              {/* CET Main Link */}
+              {/* CET & CAP Main Links */}
               <Link
                 to="/cet"
                 className={`text-xs md:text-sm font-bold font-heading hover:text-[#B88E1C] transition-colors relative py-1 ${
@@ -188,6 +188,22 @@ const Navbar = () => {
               >
                 CET
                 {location.pathname === '/cet' && (
+                  <motion.div
+                    layoutId="activeNavUnderline"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#DFAE24]"
+                    transition={{ type: 'spring', stiffness: 350, damping: 25 }}
+                  />
+                )}
+              </Link>
+
+              <Link
+                to="/cap-admission"
+                className={`text-xs md:text-sm font-bold font-heading hover:text-[#B88E1C] transition-colors relative py-1 ${
+                  location.pathname === '/cap-admission' ? 'text-[#43230F]' : 'text-[#756D63]'
+                }`}
+              >
+                CAP Admission
+                {location.pathname === '/cap-admission' && (
                   <motion.div
                     layoutId="activeNavUnderline"
                     className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#DFAE24]"
@@ -362,7 +378,7 @@ const Navbar = () => {
                   );
                 })}
 
-                {/* CET Mobile Link */}
+                {/* CET & CAP Mobile Links */}
                 <Link
                   to="/cet"
                   onClick={() => setMobileMenuOpen(false)}
@@ -372,6 +388,19 @@ const Navbar = () => {
                 >
                   <span>CET</span>
                   {location.pathname === '/cet' && (
+                    <span className="w-2 h-2 rounded-full bg-[#DFAE24]" />
+                  )}
+                </Link>
+
+                <Link
+                  to="/cap-admission"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`font-bold border-b border-[#DFAE24]/20 pb-2 flex items-center justify-between ${
+                    location.pathname === '/cap-admission' ? 'text-[#B88E1C]' : 'text-[#211A17]'
+                  }`}
+                >
+                  <span>CAP Admission</span>
+                  {location.pathname === '/cap-admission' && (
                     <span className="w-2 h-2 rounded-full bg-[#DFAE24]" />
                   )}
                 </Link>
