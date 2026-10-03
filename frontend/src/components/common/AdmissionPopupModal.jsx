@@ -7,10 +7,10 @@ const AdmissionPopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Trigger ad popup modal after 30 seconds (30,000 ms) of opening website
+    // Trigger ad popup modal after 10 seconds (10,000 ms) of opening website
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 30000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
