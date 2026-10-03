@@ -197,21 +197,48 @@ const Navbar = () => {
                 )}
               </Link>
 
-              <Link
-                to="/cap-admission"
-                className={`text-xs md:text-sm font-bold font-heading hover:text-[#B88E1C] transition-colors relative py-1 ${
-                  location.pathname === '/cap-admission' ? 'text-[#43230F]' : 'text-[#756D63]'
-                }`}
-              >
-                CAP Admission
-                {location.pathname === '/cap-admission' && (
-                  <motion.div
-                    layoutId="activeNavUnderline"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#DFAE24]"
-                    transition={{ type: 'spring', stiffness: 350, damping: 25 }}
-                  />
-                )}
-              </Link>
+              {/* CAP Admission Dropdown Menu */}
+              <div className="relative group/nav">
+                <button
+                  className={`flex items-center gap-1 text-xs md:text-sm font-bold font-heading hover:text-[#B88E1C] transition-colors cursor-pointer py-1 relative ${
+                    location.pathname.startsWith('/cap-admission') ? 'text-[#43230F]' : 'text-[#756D63]'
+                  }`}
+                >
+                  <span>CAP Admission</span>
+                  <FaChevronDown className="w-2.5 h-2.5 text-[#B88E1C]/60 group-hover/nav:text-[#B88E1C] group-hover/nav:rotate-180 transition-all duration-300" />
+                  {location.pathname.startsWith('/cap-admission') && (
+                    <motion.div
+                      layoutId="activeNavUnderline"
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#DFAE24]"
+                      transition={{ type: 'spring', stiffness: 350, damping: 25 }}
+                    />
+                  )}
+                </button>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-[#FAF8F3] border border-[#DFAE24]/30 rounded-xl shadow-xl w-64 py-2.5 opacity-0 invisible group-hover/nav:opacity-100 group-hover/nav:visible transition-all duration-200 z-50">
+                  <div className="flex flex-col">
+                    <Link
+                      to="/cap-admission/vacancy-report"
+                      className="px-4 py-2 text-xs font-semibold text-[#211A17] hover:text-[#43230F] hover:bg-[#F5F0E6] transition-colors font-body"
+                    >
+                      State CAP Vacancy Report
+                    </Link>
+                    <Link
+                      to="/cap-admission/merit-list"
+                      className="px-4 py-2 text-xs font-semibold text-[#211A17] hover:text-[#43230F] hover:bg-[#F5F0E6] transition-colors font-body"
+                    >
+                      Institutional Round Merit List
+                    </Link>
+                    <Link
+                      to="/cap-admission/advertisement"
+                      className="px-4 py-2 text-xs font-semibold text-[#211A17] hover:text-[#43230F] hover:bg-[#F5F0E6] transition-colors font-body"
+                    >
+                      Deshonnati Admission Notice
+                    </Link>
+                  </div>
+                </div>
+              </div>
 
               {/* Student Life, Activities */}
               {NAV_MENU.slice(3).map((menu) => {

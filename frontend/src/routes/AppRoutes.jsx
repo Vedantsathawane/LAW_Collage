@@ -56,6 +56,9 @@ const Career = lazy(() => import('../pages/StudentCorner/Career'));
 // CET & CAP Pages
 const CETPage = lazy(() => import('../pages/CET/CETPage'));
 const CAPAdmissionPage = lazy(() => import('../pages/CAP/CAPAdmissionPage'));
+const CAPVacancyReportPage = lazy(() => import('../pages/CAP/CAPVacancyReportPage'));
+const CAPMeritListPage = lazy(() => import('../pages/CAP/CAPMeritListPage'));
+const CAPAdvertisementPage = lazy(() => import('../pages/CAP/CAPAdvertisementPage'));
 
 // Contact & 404
 const Contact = lazy(() => import('../pages/Contact'));
@@ -105,7 +108,10 @@ const AppRoutes = () => {
 
           {/* CET & CAP Routes */}
           <Route path="cet" element={<CETPage />} />
-          <Route path="cap-admission" element={<CAPAdmissionPage />} />
+          <Route path="cap-admission" element={<Navigate to="/cap-admission/vacancy-report" replace />} />
+          <Route path="cap-admission/vacancy-report" element={<CAPVacancyReportPage />} />
+          <Route path="cap-admission/merit-list" element={<CAPMeritListPage />} />
+          <Route path="cap-admission/advertisement" element={<CAPAdvertisementPage />} />
 
           {/* Student Corner Paths */}
           <Route path="student-corner" element={<Navigate to="/student-corner/campus-facilities" replace />} />
