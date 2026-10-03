@@ -36,6 +36,7 @@ const NAV_MENU = [
     key: "admissions",
     submenu: [
       { name: "Apply Online", path: "/admission/apply" },
+      { name: "CAP Admission & Vacancy", path: "/cap-admission" },
       { name: "Admission Procedure", path: "/admission/procedure" },
       { name: "Fee Structure", path: "/admission/fees" },
       { name: "Scholarships & Rules", path: "/admission/scholarship" }

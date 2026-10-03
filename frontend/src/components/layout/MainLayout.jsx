@@ -5,12 +5,16 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Breadcrumb from '../common/Breadcrumb';
 import ScrollToTop from '../common/ScrollToTop';
+import AdmissionPopupModal from '../common/AdmissionPopupModal';
 
 const MainLayout = () => {
   return (
     <div className="flex flex-col min-h-screen bg-slate-50">
       {/* Scroll manager */}
       <ScrollToTop />
+
+      {/* 30-Second CAP Admission Advertisement Popup Modal */}
+      <AdmissionPopupModal />
 
       {/* Header section wrapper */}
       <header className="sticky top-0 z-40 shadow-sm">
