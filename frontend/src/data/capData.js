@@ -111,3 +111,80 @@ export const capVacancyReport = {
     }
   ]
 };
+
+export const capMeritListRoundIV = {
+  title: "MERIT LIST",
+  collegeName: "Dr. Milind Yerne College of Law, Kosara Kondha",
+  subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year Course)",
+  roundTitle: "Round-I",
+  publishedDate: "30/09/2026",
+  displayDate: "30/09/2026 (Updated: 03-10-2026)",
+  signatory: "Dr. Milind Yerne, Principal / Incharge",
+  categoriesData: [
+    {
+      categoryName: "OPEN",
+      candidates: [
+        { srNo: 1, name: "Aniket Rupchand Karanjekar", interSeMerit: 1, meritListNo: 46, cetPercentile: "65.49", category: "OPEN" },
+        { srNo: 2, name: "Saikiran Shrinivas Tulsigiri", interSeMerit: 2, meritListNo: 142, cetPercentile: "48.72", category: "OPEN" },
+        { srNo: 3, name: "Kumudini Pravin Zade", interSeMerit: 3, meritListNo: 143, cetPercentile: "48.72", category: "OPEN" },
+        { srNo: 4, name: "Nimisha Mallesh Gorpati", interSeMerit: 4, meritListNo: 335, cetPercentile: "22.6", category: "OPEN" },
+        { srNo: 5, name: "Damodhar Narayan Gaikwad", interSeMerit: 5, meritListNo: 338, cetPercentile: "22.55", category: "OPEN" },
+        { srNo: 6, name: "Harsh Vinodkumar Modi", interSeMerit: 6, meritListNo: 349, cetPercentile: "20.46", category: "OPEN" }
+      ]
+    },
+    {
+      categoryName: "OBC",
+      candidates: [
+        { srNo: 1, name: "Girish Dudhram Misar", interSeMerit: 1, meritListNo: 61, cetPercentile: "62.22", category: "OBC" },
+        { srNo: 2, name: "Digambar Radhesham Pathode", interSeMerit: 2, meritListNo: 443, cetPercentile: "4.63", category: "OBC" }
+      ]
+    },
+    {
+      categoryName: "SC",
+      candidates: [
+        { srNo: 1, name: "Vinitkumar Arjun Tembhurne", interSeMerit: 1, meritListNo: 44, cetPercentile: "65.57", category: "SC" },
+        { srNo: 2, name: "Ratnakul Yeshwant Meshram", interSeMerit: 2, meritListNo: 73, cetPercentile: "59.90", category: "SC" },
+        { srNo: 3, name: "Narendra Dadaji Moon", interSeMerit: 3, meritListNo: 148, cetPercentile: "67.00", category: "SC" },
+        { srNo: 4, name: "Piyush Dipak Thaware", interSeMerit: 4, meritListNo: 312, cetPercentile: "27.23", category: "SC" },
+        { srNo: 5, name: "Suhas Prakash Walde", interSeMerit: 5, meritListNo: 359, cetPercentile: "16.68", category: "SC" }
+      ]
+    }
+  ]
+};
+
+export const capAdvertisementNotice = {
+  paperName: "देशोन्नती (Deshonnati News Notification)",
+  heading: "ADMISSION OPEN – IVth INSTITUTIONAL ROUND",
+  sansthaName: "LATE MALATAI YERNE SMRUTI BAHUUDDESHIYA SANSTHA'S",
+  collegeName: "DR. MILIND YERNE COLLEGE OF LAW, KOSARA-KONDHA",
+  approvals: "APPROVED BY BAR COUNCIL OF INDIA (BCI) & AFFILIATED TO RASHTRASANT TUKADOJI MAHARAJ NAGPUR UNIVERSITY",
+  academicYear: "LL.B. FIRST YEAR ADMISSION – 2026-27",
+  subTitle: "Admissions against CAP Vacant Seats – IVth Institutional Round",
+  courses: [
+    {
+      courseName: "B.A. LL.B. 5 Years",
+      admissionDates: "01/10/2026 to 04/10/2026",
+      vacantSeats: 66
+    },
+    {
+      courseName: "LL.B. – 3 Years",
+      admissionDates: "03/10/2026 to 04/10/2026",
+      vacantSeats: 52
+    }
+  ],
+  note: "Vacant seats are inclusive of EWS seats and subject to availability.",
+  importantNotice: [
+    "Admission will be conducted as per the CET Cell-generated Merit List available on the CET Web Portal, College Website and College Notice Board.",
+    "Reporting Time: 10:00 a.m. to 12:00 noon",
+    "Allotment List: 1:00 p.m. on respective admission days.",
+    "Students are required to follow the IVth Institutional Round admission procedure as per the instructions displayed on the College Website and Notice Board."
+  ],
+  contactNumbers: [
+    "8975677965",
+    "9284974125",
+    "9422659807",
+    "9405249027"
+  ],
+  signatory: "Principal, Dr. Milind Yerne College of Law, Kosara-Kondha",
+  websiteUrl: "www.drmycollegeoflaw.org"
+};
