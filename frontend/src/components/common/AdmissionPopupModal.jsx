@@ -7,22 +7,16 @@ const AdmissionPopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Check if user already dismissed pop-up in current session
-    const hasSeenPopup = sessionStorage.getItem('dmycl_cap_ad_seen');
+    // Trigger ad popup modal after 30 seconds (30,000 ms) of opening website
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 30000);
 
-    if (!hasSeenPopup) {
-      // Trigger popup after 30 seconds (30,000 ms)
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 30000);
-
-      return () => clearTimeout(timer);
-    }
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
     setIsOpen(false);
-    sessionStorage.setItem('dmycl_cap_ad_seen', 'true');
   };
 
   return (
