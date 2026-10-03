@@ -124,7 +124,7 @@ const Navbar = () => {
           </Link>
 
             {/* CENTER / RIGHT: Navigation Links */}
-            <div className="hidden lg:flex items-center space-x-6" aria-label="Main Navigation">
+            <div className="hidden lg:flex items-center space-x-3 xl:space-x-5" aria-label="Main Navigation">
               <Link
                 to="/"
                 className={`text-xs md:text-sm font-bold font-heading hover:text-[#B88E1C] transition-colors relative py-1 ${
@@ -200,11 +200,11 @@ const Navbar = () => {
               {/* CAP Admission Dropdown Menu */}
               <div className="relative group/nav">
                 <button
-                  className={`flex items-center gap-1 text-xs md:text-sm font-bold font-heading hover:text-[#B88E1C] transition-colors cursor-pointer py-1 relative ${
+                  className={`flex items-center gap-1 text-xs md:text-sm font-bold font-heading hover:text-[#B88E1C] transition-colors cursor-pointer py-1 relative whitespace-nowrap ${
                     location.pathname.startsWith('/cap-admission') ? 'text-[#43230F]' : 'text-[#756D63]'
                   }`}
                 >
-                  <span>CAP Admission</span>
+                  <span className="whitespace-nowrap">CAP Admission</span>
                   <FaChevronDown className="w-2.5 h-2.5 text-[#B88E1C]/60 group-hover/nav:text-[#B88E1C] group-hover/nav:rotate-180 transition-all duration-300" />
                   {location.pathname.startsWith('/cap-admission') && (
                     <motion.div
