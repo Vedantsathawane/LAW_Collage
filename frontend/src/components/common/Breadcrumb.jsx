@@ -11,7 +11,8 @@ const Breadcrumb = () => {
 
   // Map path chunks to clean user-facing titles
   const formatName = (name) => {
-    const uppercaseAcronyms = ['cet', 'nss', 'ncc', 'iqac', 'naac', 'nirf', 'rti'];
+    if (name.toLowerCase() === 'cap-admission') return 'CAP Admission';
+    const uppercaseAcronyms = ['cet', 'nss', 'ncc', 'iqac', 'naac', 'nirf', 'rti', 'cap'];
     if (uppercaseAcronyms.includes(name.toLowerCase())) {
       return name.toUpperCase();
     }
