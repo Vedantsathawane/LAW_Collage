@@ -112,13 +112,16 @@ export const capVacancyReport = {
   ]
 };
 
-export const capMeritListRoundIV = {
-  title: "MERIT LIST",
+export const capMeritListRoundIV_1st = {
+  id: "1st-merit-list",
+  title: "1st MERIT LIST",
   collegeName: "Dr. Milind Yerne College of Law, Kosara Kondha",
   subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year Course)",
-  roundTitle: "Round-I",
-  publishedDate: "30/09/2026",
-  displayDate: "30/09/2026 (Updated: 03-10-2026)",
+  roundTitle: "Round-I (1st List)",
+  publishedDate: "03/10/2026",
+  publicationTime: "1:00 PM",
+  displayDate: "03/10/2026 at 1:00 PM",
+  publishedNote: "1st Merit List Published 03/10/2026 1:00 PM",
   signatory: "Dr. Milind Yerne, Principal / Incharge",
   categoriesData: [
     {
@@ -151,6 +154,63 @@ export const capMeritListRoundIV = {
     }
   ]
 };
+
+export const capMeritListRoundIV_2nd = {
+  id: "2nd-merit-list",
+  title: "2nd MERIT LIST",
+  collegeName: "Dr. Milind Yerne College of Law, Kosara Kondha",
+  subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year Course)",
+  roundTitle: "Round-I (2nd List)",
+  publishedDate: "04/10/2026",
+  publicationTime: "1:00 PM",
+  displayDate: "04/10/2026 at 1:00 PM",
+  publishedNote: "Merit List Published 4/10/2026 1:00 PM",
+  signatory: "Dr. Milind Yerne, Principal / Incharge",
+  categoriesData: [
+    {
+      categoryName: "OPEN",
+      candidates: [
+        { srNo: 1, name: "Amit Suryabhan Natkar", interSeMerit: 1, meritListNo: 125, cetPercentile: "51.17", category: "OPEN" },
+        { srNo: 2, name: "Rajesh Kawadu Nandurkar", interSeMerit: 2, meritListNo: 146, cetPercentile: "48.64", category: "OPEN" },
+        { srNo: 3, name: "Prabodh Sheshrao Bhagat", interSeMerit: 3, meritListNo: 182, cetPercentile: "43.38", category: "OPEN" },
+        { srNo: 4, name: "Keshav Shankarrao Badkhal", interSeMerit: 4, meritListNo: 214, cetPercentile: "39.82", category: "OPEN" },
+        { srNo: 5, name: "Mayur Dharamshil Ramteke", interSeMerit: 5, meritListNo: 247, cetPercentile: "33.96", category: "OPEN" },
+        { srNo: 6, name: "Sangita Pradiprao Mhatre", interSeMerit: 6, meritListNo: 291, cetPercentile: "29.41", category: "OPEN" },
+        { srNo: 7, name: "Sarika Devidas Belekar", interSeMerit: 7, meritListNo: 311, cetPercentile: "27.23", category: "OPEN" },
+        { srNo: 8, name: "Suhas Prakas Walde", interSeMerit: 8, meritListNo: 369, cetPercentile: "16.68", category: "OPEN" }
+      ]
+    },
+    {
+      categoryName: "SC",
+      candidates: [
+        { srNo: 1, name: "Hemant Dhanraj Urade", interSeMerit: 1, meritListNo: 386, cetPercentile: "14.19", category: "SC" }
+      ]
+    },
+    {
+      categoryName: "OBC",
+      candidates: [
+        { srNo: 1, name: "Kaushik Shankar Chaudhary", interSeMerit: 1, meritListNo: 271, cetPercentile: "31.75", category: "OBC" },
+        { srNo: 2, name: "Roshan Babarao Kale", interSeMerit: 2, meritListNo: 308, cetPercentile: "28.31", category: "OBC" },
+        { srNo: 3, name: "Riteekkumar Dilip Atre", interSeMerit: 3, meritListNo: 389, cetPercentile: "13.39", category: "OBC" },
+        { srNo: 4, name: "Mayur Devidas Vairagde", interSeMerit: 4, meritListNo: 391, cetPercentile: "13.39", category: "OBC" }
+      ]
+    },
+    {
+      categoryName: "Management",
+      candidates: [
+        { srNo: 1, name: "Pravesh Keshaorao Meshram", interSeMerit: 1, meritListNo: 1, cetPercentile: "92.93", category: "MGMT" }
+      ]
+    }
+  ]
+};
+
+export const capMeritLists = [
+  capMeritListRoundIV_1st,
+  capMeritListRoundIV_2nd
+];
+
+// Default export for backward compatibility
+export const capMeritListRoundIV = capMeritListRoundIV_2nd;
 
 export const capAdvertisementNotice = {
   paperName: "देशोन्नती (Deshonnati News Notification)",

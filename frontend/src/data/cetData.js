@@ -6,6 +6,149 @@
 
 export const CET_YEAR_DATA = [
   {
+    year: "2026–27",
+    yearNum: 2026,
+    yearSlug: "2026-27",
+    isUnderMaintenance: false,
+    records: [
+      {
+        id: "cet-2026-27-m2",
+        date: "2026-10-04",
+        displayDate: "04-10-2026",
+        formattedDate: "04 October 2026",
+        publicationTime: "13:00",
+        publicationTimeDisplay: "1:00 PM IST",
+        timezone: "Asia/Kolkata",
+        roundName: "Round-I (2nd Merit List)",
+        title: "CET CAP Round-IV 2nd Merit List",
+        fullHeaderTitle: "2nd Merit List | 04-10-2026",
+        course: "L.L.B. (3 Year Course)",
+        categorySummary: "OPEN, SC, OBC, Management",
+        documentType: "Official CET Merit List",
+        fileUrl: "/pdf/cet/2025/round-4-25-09-2025.pdf",
+        fileType: "PDF",
+        fileSize: "2.2 MB",
+        publishedNote: "Merit List Published 4/10/2026 1:00 PM",
+        sections: [
+          {
+            categoryName: "OPEN",
+            items: [
+              { srNo: 1, name: "Amit Suryabhan Natkar", interSeMerit: 1, meritSrNo: 125, percentile: 51.17, category: "OPEN" },
+              { srNo: 2, name: "Rajesh Kawadu Nandurkar", interSeMerit: 2, meritSrNo: 146, percentile: 48.64, category: "OPEN" },
+              { srNo: 3, name: "Prabodh Sheshrao Bhagat", interSeMerit: 3, meritSrNo: 182, percentile: 43.38, category: "OPEN" },
+              { srNo: 4, name: "Keshav Shankarrao Badkhal", interSeMerit: 4, meritSrNo: 214, percentile: 39.82, category: "OPEN" },
+              { srNo: 5, name: "Mayur Dharamshil Ramteke", interSeMerit: 5, meritSrNo: 247, percentile: 33.96, category: "OPEN" },
+              { srNo: 6, name: "Sangita Pradiprao Mhatre", interSeMerit: 6, meritSrNo: 291, percentile: 29.41, category: "OPEN" },
+              { srNo: 7, name: "Sarika Devidas Belekar", interSeMerit: 7, meritSrNo: 311, percentile: 27.23, category: "OPEN" },
+              { srNo: 8, name: "Suhas Prakas Walde", interSeMerit: 8, meritSrNo: 369, percentile: 16.68, category: "OPEN" }
+            ]
+          },
+          {
+            categoryName: "SC",
+            items: [
+              { srNo: 1, name: "Hemant Dhanraj Urade", interSeMerit: 1, meritSrNo: 386, percentile: 14.19, category: "SC" }
+            ]
+          },
+          {
+            categoryName: "OBC",
+            items: [
+              { srNo: 1, name: "Kaushik Shankar Chaudhary", interSeMerit: 1, meritSrNo: 271, percentile: 31.75, category: "OBC" },
+              { srNo: 2, name: "Roshan Babarao Kale", interSeMerit: 2, meritSrNo: 308, percentile: 28.31, category: "OBC" },
+              { srNo: 3, name: "Riteekkumar Dilip Atre", interSeMerit: 3, meritSrNo: 389, percentile: 13.39, category: "OBC" },
+              { srNo: 4, name: "Mayur Devidas Vairagde", interSeMerit: 4, meritSrNo: 391, percentile: 13.39, category: "OBC" }
+            ]
+          },
+          {
+            categoryName: "MANAGEMENT",
+            items: [
+              { srNo: 1, name: "Pravesh Keshaorao Meshram", interSeMerit: 1, meritSrNo: 1, percentile: 92.93, category: "MGMT" }
+            ]
+          }
+        ],
+        candidates: [
+          { srNo: 1, name: "Amit Suryabhan Natkar", interSeMerit: 1, meritSrNo: 125, percentile: 51.17, category: "OPEN" },
+          { srNo: 2, name: "Rajesh Kawadu Nandurkar", interSeMerit: 2, meritSrNo: 146, percentile: 48.64, category: "OPEN" },
+          { srNo: 3, name: "Prabodh Sheshrao Bhagat", interSeMerit: 3, meritSrNo: 182, percentile: 43.38, category: "OPEN" },
+          { srNo: 4, name: "Keshav Shankarrao Badkhal", interSeMerit: 4, meritSrNo: 214, percentile: 39.82, category: "OPEN" },
+          { srNo: 5, name: "Mayur Dharamshil Ramteke", interSeMerit: 5, meritSrNo: 247, percentile: 33.96, category: "OPEN" },
+          { srNo: 6, name: "Sangita Pradiprao Mhatre", interSeMerit: 6, meritSrNo: 291, percentile: 29.41, category: "OPEN" },
+          { srNo: 7, name: "Sarika Devidas Belekar", interSeMerit: 7, meritSrNo: 311, percentile: 27.23, category: "OPEN" },
+          { srNo: 8, name: "Suhas Prakas Walde", interSeMerit: 8, meritSrNo: 369, percentile: 16.68, category: "OPEN" },
+          { srNo: 1, name: "Hemant Dhanraj Urade", interSeMerit: 1, meritSrNo: 386, percentile: 14.19, category: "SC" },
+          { srNo: 1, name: "Kaushik Shankar Chaudhary", interSeMerit: 1, meritSrNo: 271, percentile: 31.75, category: "OBC" },
+          { srNo: 2, name: "Roshan Babarao Kale", interSeMerit: 2, meritSrNo: 308, percentile: 28.31, category: "OBC" },
+          { srNo: 3, name: "Riteekkumar Dilip Atre", interSeMerit: 3, meritSrNo: 389, percentile: 13.39, category: "OBC" },
+          { srNo: 4, name: "Mayur Devidas Vairagde", interSeMerit: 4, meritSrNo: 391, percentile: 13.39, category: "OBC" },
+          { srNo: 1, name: "Pravesh Keshaorao Meshram", interSeMerit: 1, meritSrNo: 1, percentile: 92.93, category: "MGMT" }
+        ]
+      },
+      {
+        id: "cet-2026-27-m1",
+        date: "2026-10-03",
+        displayDate: "03-10-2026",
+        formattedDate: "03 October 2026",
+        publicationTime: "13:00",
+        publicationTimeDisplay: "1:00 PM IST",
+        timezone: "Asia/Kolkata",
+        roundName: "Round-I (1st Merit List)",
+        title: "CET CAP Round-IV 1st Merit List",
+        fullHeaderTitle: "1st Merit List | 03-10-2026",
+        course: "L.L.B. (3 Year Course)",
+        categorySummary: "OPEN, OBC, SC",
+        documentType: "Official CET Merit List",
+        fileUrl: "/pdf/cet/2025/round-3-24-09-2025.pdf",
+        fileType: "PDF",
+        fileSize: "2.1 MB",
+        publishedNote: "1st Published 03/10/2026 1:00 PM",
+        sections: [
+          {
+            categoryName: "OPEN",
+            items: [
+              { srNo: 1, name: "Aniket Rupchand Karanjekar", interSeMerit: 1, meritSrNo: 46, percentile: 65.49, category: "OPEN" },
+              { srNo: 2, name: "Saikiran Shrinivas Tulsigiri", interSeMerit: 2, meritSrNo: 142, percentile: 48.72, category: "OPEN" },
+              { srNo: 3, name: "Kumudini Pravin Zade", interSeMerit: 3, meritSrNo: 143, percentile: 48.72, category: "OPEN" },
+              { srNo: 4, name: "Nimisha Mallesh Gorpati", interSeMerit: 4, meritSrNo: 335, percentile: 22.60, category: "OPEN" },
+              { srNo: 5, name: "Damodhar Narayan Gaikwad", interSeMerit: 5, meritSrNo: 338, percentile: 22.55, category: "OPEN" },
+              { srNo: 6, name: "Harsh Vinodkumar Modi", interSeMerit: 6, meritSrNo: 349, percentile: 20.46, category: "OPEN" }
+            ]
+          },
+          {
+            categoryName: "OBC",
+            items: [
+              { srNo: 1, name: "Girish Dudhram Misar", interSeMerit: 1, meritSrNo: 61, percentile: 62.22, category: "OBC" },
+              { srNo: 2, name: "Digambar Radhesham Pathode", interSeMerit: 2, meritSrNo: 443, percentile: 4.63, category: "OBC" }
+            ]
+          },
+          {
+            categoryName: "SC",
+            items: [
+              { srNo: 1, name: "Vinitkumar Arjun Tembhurne", interSeMerit: 1, meritSrNo: 44, percentile: 65.57, category: "SC" },
+              { srNo: 2, name: "Ratnakul Yeshwant Meshram", interSeMerit: 2, meritSrNo: 73, percentile: 59.90, category: "SC" },
+              { srNo: 3, name: "Narendra Dadaji Moon", interSeMerit: 3, meritSrNo: 148, percentile: 67.00, category: "SC" },
+              { srNo: 4, name: "Piyush Dipak Thaware", interSeMerit: 4, meritSrNo: 312, percentile: 27.23, category: "SC" },
+              { srNo: 5, name: "Suhas Prakash Walde", interSeMerit: 5, meritSrNo: 359, percentile: 16.68, category: "SC" }
+            ]
+          }
+        ],
+        candidates: [
+          { srNo: 1, name: "Aniket Rupchand Karanjekar", interSeMerit: 1, meritSrNo: 46, percentile: 65.49, category: "OPEN" },
+          { srNo: 2, name: "Saikiran Shrinivas Tulsigiri", interSeMerit: 2, meritSrNo: 142, percentile: 48.72, category: "OPEN" },
+          { srNo: 3, name: "Kumudini Pravin Zade", interSeMerit: 3, meritSrNo: 143, percentile: 48.72, category: "OPEN" },
+          { srNo: 4, name: "Nimisha Mallesh Gorpati", interSeMerit: 4, meritSrNo: 335, percentile: 22.60, category: "OPEN" },
+          { srNo: 5, name: "Damodhar Narayan Gaikwad", interSeMerit: 5, meritSrNo: 338, percentile: 22.55, category: "OPEN" },
+          { srNo: 6, name: "Harsh Vinodkumar Modi", interSeMerit: 6, meritSrNo: 349, percentile: 20.46, category: "OPEN" },
+          { srNo: 1, name: "Girish Dudhram Misar", interSeMerit: 1, meritSrNo: 61, percentile: 62.22, category: "OBC" },
+          { srNo: 2, name: "Digambar Radhesham Pathode", interSeMerit: 2, meritSrNo: 443, percentile: 4.63, category: "OBC" },
+          { srNo: 1, name: "Vinitkumar Arjun Tembhurne", interSeMerit: 1, meritSrNo: 44, percentile: 65.57, category: "SC" },
+          { srNo: 2, name: "Ratnakul Yeshwant Meshram", interSeMerit: 2, meritSrNo: 73, percentile: 59.90, category: "SC" },
+          { srNo: 3, name: "Narendra Dadaji Moon", interSeMerit: 3, meritSrNo: 148, percentile: 67.00, category: "SC" },
+          { srNo: 4, name: "Piyush Dipak Thaware", interSeMerit: 4, meritSrNo: 312, percentile: 27.23, category: "SC" },
+          { srNo: 5, name: "Suhas Prakash Walde", interSeMerit: 5, meritSrNo: 359, percentile: 16.68, category: "SC" }
+        ]
+      }
+    ]
+  },
+  {
     year: "2025–26",
     yearNum: 2025,
     yearSlug: "2025-26",

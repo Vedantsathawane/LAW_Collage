@@ -21,16 +21,23 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import Container from '../../components/common/Container';
 import SectionTitle from '../../components/common/SectionTitle';
-import { capVacancyReport, capMeritListRoundIV, capAdvertisementNotice } from '../../data/capData';
+import { capVacancyReport, capMeritLists, capAdvertisementNotice } from '../../data/capData';
 
 const CAPAdmissionPage = () => {
   const [activeTab, setActiveTab] = useState('ALL'); // 'ALL' | 'VACANCY' | 'MERIT_LIST' | 'ADVERTISEMENT'
+  const [selectedMeritListId, setSelectedMeritListId] = useState('2nd-merit-list');
   const [meritSearch, setMeritSearch] = useState('');
   const [selectedMeritCategory, setSelectedMeritCategory] = useState('ALL');
 
   const report = capVacancyReport;
-  const meritList = capMeritListRoundIV;
+  const meritList = useMemo(() => {
+    return capMeritLists.find(l => l.id === selectedMeritListId) || capMeritLists[0];
+  }, [selectedMeritListId]);
   const adNotice = capAdvertisementNotice;
+
+  const availableCategories = useMemo(() => {
+    return meritList.categoriesData.map(cat => cat.categoryName);
+  }, [meritList]);
 
   // Calculate vacancy totals per category column
   const categoryTotals = useMemo(() => {
@@ -327,16 +334,47 @@ const CAPAdmissionPage = () => {
             animate={{ opacity: 1, y: 0 }}
             className="mb-12"
           >
+            {/* Merit List Selectors (1st vs 2nd) */}
+            <div className="flex flex-wrap items-center justify-start gap-3 mb-6 select-none">
+              {capMeritLists.map((list) => {
+                const isSelected = selectedMeritListId === list.id;
+                return (
+                  <button
+                    key={list.id}
+                    onClick={() => {
+                      setSelectedMeritListId(list.id);
+                      setSelectedMeritCategory('ALL');
+                    }}
+                    className={`px-4 py-2.5 rounded-xl text-xs font-bold font-heading transition-all duration-200 cursor-pointer flex items-center gap-2 border shadow-xs ${
+                      isSelected
+                        ? 'bg-[#26130D] text-[#DFAE24] border-[#DFAE24]/50 shadow-sm'
+                        : 'bg-white text-[#756D63] border-[#DFAE24]/30 hover:bg-[#F5F0E6] hover:text-[#26130D]'
+                    }`}
+                  >
+                    <FaAward className={isSelected ? 'text-[#DFAE24]' : 'text-[#B88E1C]'} />
+                    <span>{list.title}</span>
+                    <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-full border ${
+                      isSelected 
+                        ? 'bg-[#DFAE24] text-[#26130D] border-transparent' 
+                        : 'bg-[#F5F0E6] text-[#756D63] border-[#DFAE24]/30'
+                    }`}>
+                      {list.publishedDate} (1:00 PM)
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
               <div>
                 <span className="inline-block text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded bg-[#F5F0E6] text-[#B88E1C] border border-[#DFAE24]/30 mb-1 font-heading">
-                  Official Candidate Rankings • 30/09/2026
+                  Official Verified Copy &bull; Published {meritList.displayDate}
                 </span>
                 <h2 className="text-xl md:text-2xl font-extrabold font-heading text-[#26130D]">
-                  CET CAP Round-IV Institutional Round Merit List
+                  {meritList.title} – CET CAP Round-IV Institutional Merit List
                 </h2>
                 <p className="text-xs text-[#756D63] mt-0.5">
-                  L.L.B. (3 Year Course) Round-I Merit Candidate Records (As of 30/09/2026)
+                  L.L.B. (3 Year Course) Candidate Records (Published: {meritList.publishedDate} at 1:00 PM)
                 </p>
               </div>
 
@@ -359,9 +397,11 @@ const CAPAdmissionPage = () => {
                   className="py-1.5 px-3 text-xs bg-white border border-[#DFAE24]/40 rounded-xl text-[#26130D] font-bold focus:outline-none"
                 >
                   <option value="ALL">All Categories</option>
-                  <option value="OPEN">OPEN Category</option>
-                  <option value="OBC">OBC Category</option>
-                  <option value="SC">SC Category</option>
+                  {availableCategories.map((catName) => (
+                    <option key={catName} value={catName}>
+                      {catName} Category
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
@@ -370,11 +410,19 @@ const CAPAdmissionPage = () => {
             <div className="border border-[#DFAE24]/40 rounded-2xl bg-white shadow-xs overflow-hidden">
               <div className="bg-[#26130D] text-[#FAF8F3] p-5 border-b border-[#DFAE24]/30 flex flex-col md:flex-row items-center justify-between gap-4">
                 <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="bg-[#DFAE24] text-[#26130D] font-black text-[10px] uppercase px-2 py-0.5 rounded font-heading">
+                      {meritList.publishedDate === '04/10/2026' ? '2nd List' : '1st List'}
+                    </span>
+                    <span className="text-xs text-[#DFAE24] font-bold flex items-center gap-1">
+                      <FaClock className="text-[11px]" /> Published at 1:00 PM IST
+                    </span>
+                  </div>
                   <h3 className="text-lg font-extrabold font-heading text-[#FAF8F3]">
                     {meritList.title} – {meritList.subtitle}
                   </h3>
                   <p className="text-xs text-[#DFAE24] font-semibold mt-1">
-                    {meritList.collegeName} • {meritList.roundTitle} ({meritList.displayDate})
+                    {meritList.collegeName} &bull; {meritList.roundTitle} ({meritList.displayDate})
                   </p>
                 </div>
                 <div className="flex items-center gap-2">
@@ -450,7 +498,13 @@ const CAPAdmissionPage = () => {
 
               {/* Signatory Footer */}
               <div className="bg-[#FAF8F3] p-4 border-t border-[#DFAE24]/30 flex flex-col sm:flex-row items-center justify-between text-xs text-[#756D63] gap-2">
-                <span className="font-semibold">Official Verified Copy • Dr. Milind Yerne College of Law Seal</span>
+                <div className="flex items-center gap-2 font-semibold">
+                  <FaCheckCircle className="text-[#B88E1C]" />
+                  <span>Official Verified Copy &bull; Dr. Milind Yerne College of Law Seal</span>
+                  <span className="text-[10px] font-mono bg-[#F5F0E6] px-2 py-0.5 rounded border border-[#DFAE24]/30 text-[#26130D]">
+                    {meritList.publishedNote}
+                  </span>
+                </div>
                 <span className="font-extrabold text-[#26130D]">{meritList.signatory}</span>
               </div>
             </div>
