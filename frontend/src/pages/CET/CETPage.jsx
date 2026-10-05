@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { FaSearch, FaTimes, FaGraduationCap, FaFilePdf, FaFilter, FaClock } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -11,10 +12,28 @@ import { getSortedCETResults } from '../../data/cetData';
 
 const CETPage = () => {
   const sortedYearData = useMemo(() => getSortedCETResults(), []);
+  const location = useLocation();
   
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedYearFilter, setSelectedYearFilter] = useState('ALL'); // 'ALL' | year string e.g. '2025–26'
   const [activeModalRecord, setActiveModalRecord] = useState(null);
+
+  // Auto-open PDF modal if URL query param contains pdfId
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const pdfId = params.get('pdfId') || params.get('pdf') || params.get('recordId');
+    if (pdfId) {
+      const allRecords = sortedYearData.flatMap((y) => y.records);
+      const targetRecord = allRecords.find((r) => r.id === pdfId);
+      if (targetRecord) {
+        setActiveModalRecord(targetRecord);
+        const section = document.getElementById('cet-download-section');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+  }, [location.search, sortedYearData]);
 
   // Expanded year accordion state (Default expand the first/newest year)
   const [openYearId, setOpenYearId] = useState(() => {
@@ -104,7 +123,7 @@ const CETPage = () => {
         {/* Hero Section */}
         <CETHero />
 
-        <div className="max-w-5xl mx-auto">
+        <div id="cet-download-section" className="max-w-5xl mx-auto">
           {/* Controls Bar: Search & Year Filter */}
           <div className="mb-8 p-4 md:p-6 bg-white rounded-2xl border border-[#DFAE24]/30 shadow-xs space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">

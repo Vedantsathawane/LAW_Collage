@@ -204,13 +204,43 @@ export const capMeritListRoundIV_2nd = {
   ]
 };
 
+export const capMeritListRoundIV_3rd = {
+  id: "3rd-merit-list",
+  title: "3rd MERIT LIST",
+  collegeName: "Dr. Milind Yerne College of Law, Kosara Kondha",
+  subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year Course)",
+  roundTitle: "Round-III (3rd List)",
+  publishedDate: "05/10/2026",
+  publicationTime: "1:00 PM",
+  displayDate: "05/10/2026 at 1:00 PM",
+  publishedNote: "3rd Merit List Published 05/10/2026 1:00 PM",
+  signatory: "Dr. Milind Yerne, Principal / Incharge",
+  categoriesData: [
+    {
+      categoryName: "OPEN",
+      candidates: [
+        { srNo: 1, name: "Bhagyashree Bakul Ramteke", interSeMerit: 1, meritListNo: 96, cetPercentile: "56.48", category: "OPEN" },
+        { srNo: 2, name: "Lina Avinash Meshra", interSeMerit: 2, meritListNo: 108, cetPercentile: "54.05", category: "OPEN" }
+      ]
+    },
+    {
+      categoryName: "SC",
+      candidates: [
+        { srNo: 1, name: "Soni Bharat Bhaisare", interSeMerit: 1, meritListNo: 164, cetPercentile: "46.05", category: "SC" },
+        { srNo: 2, name: "Subodh Arvind Meshram", interSeMerit: 3, meritListNo: 194, cetPercentile: "41.69", category: "SC" }
+      ]
+    }
+  ]
+};
+
 export const capMeritLists = [
-  capMeritListRoundIV_1st,
-  capMeritListRoundIV_2nd
+  capMeritListRoundIV_3rd,
+  capMeritListRoundIV_2nd,
+  capMeritListRoundIV_1st
 ];
 
 // Default export for backward compatibility
-export const capMeritListRoundIV = capMeritListRoundIV_2nd;
+export const capMeritListRoundIV = capMeritListRoundIV_3rd;
 
 export const capAdvertisementNotice = {
   paperName: "देशोन्नती (Deshonnati News Notification)",

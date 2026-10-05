@@ -12,6 +12,47 @@ export const CET_YEAR_DATA = [
     isUnderMaintenance: false,
     records: [
       {
+        id: "cet-2026-27-m3",
+        date: "2026-10-05",
+        displayDate: "05-10-2026",
+        formattedDate: "05 October 2026",
+        publicationTime: "13:00",
+        publicationTimeDisplay: "1:00 PM IST",
+        timezone: "Asia/Kolkata",
+        roundName: "Round-III (3rd Merit List)",
+        title: "CET CAP Round-IV 3rd Merit List",
+        fullHeaderTitle: "3rd Merit List | 05-10-2026",
+        course: "L.L.B. (3 Year Course)",
+        categorySummary: "OPEN, SC",
+        documentType: "Official CET Merit List",
+        fileUrl: "/pdf/cet/2025/round-4-25-09-2025.pdf",
+        fileType: "PDF",
+        fileSize: "2.1 MB",
+        publishedNote: "3rd Merit List Published 05/10/2026 1:00 PM",
+        sections: [
+          {
+            categoryName: "OPEN",
+            items: [
+              { srNo: 1, name: "Bhagyashree Bakul Ramteke", interSeMerit: 1, meritSrNo: 96, percentile: 56.48, category: "OPEN" },
+              { srNo: 2, name: "Lina Avinash Meshra", interSeMerit: 2, meritSrNo: 108, percentile: 54.05, category: "OPEN" }
+            ]
+          },
+          {
+            categoryName: "SC",
+            items: [
+              { srNo: 1, name: "Soni Bharat Bhaisare", interSeMerit: 1, meritSrNo: 164, percentile: 46.05, category: "SC" },
+              { srNo: 2, name: "Subodh Arvind Meshram", interSeMerit: 3, meritSrNo: 194, percentile: 41.69, category: "SC" }
+            ]
+          }
+        ],
+        candidates: [
+          { srNo: 1, name: "Bhagyashree Bakul Ramteke", interSeMerit: 1, meritSrNo: 96, percentile: 56.48, category: "OPEN" },
+          { srNo: 2, name: "Lina Avinash Meshra", interSeMerit: 2, meritSrNo: 108, percentile: 54.05, category: "OPEN" },
+          { srNo: 1, name: "Soni Bharat Bhaisare", interSeMerit: 1, meritSrNo: 164, percentile: 46.05, category: "SC" },
+          { srNo: 2, name: "Subodh Arvind Meshram", interSeMerit: 3, meritSrNo: 194, percentile: 41.69, category: "SC" }
+        ]
+      },
+      {
         id: "cet-2026-27-m2",
         date: "2026-10-04",
         displayDate: "04-10-2026",

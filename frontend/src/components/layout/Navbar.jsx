@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FaBars, FaTimes, FaSearch, FaChevronDown } from 'react-icons/fa';
+import { FaBars, FaTimes, FaSearch, FaChevronDown, FaBell, FaFilePdf, FaExternalLinkAlt, FaCheckCircle, FaClock } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import SearchDrawer from './SearchDrawer';
 
@@ -72,8 +72,42 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [notifOpen, setNotifOpen] = useState(false);
   const [activeAccordion, setActiveAccordion] = useState(null);
   const location = useLocation();
+
+  const meritNotifications = [
+    {
+      id: "cet-2026-27-m3",
+      title: "3rd MERIT LIST",
+      subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year)",
+      date: "05/10/2026",
+      time: "1:00 PM IST",
+      isNew: true,
+      categorySummary: "OPEN, SC",
+      pdfUrl: "/cet?pdfId=cet-2026-27-m3"
+    },
+    {
+      id: "cet-2026-27-m2",
+      title: "2nd MERIT LIST",
+      subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year)",
+      date: "04/10/2026",
+      time: "1:00 PM IST",
+      isNew: false,
+      categorySummary: "OPEN, SC, OBC, Management",
+      pdfUrl: "/cet?pdfId=cet-2026-27-m2"
+    },
+    {
+      id: "cet-2026-27-m1",
+      title: "1st MERIT LIST",
+      subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year)",
+      date: "03/10/2026",
+      time: "1:00 PM IST",
+      isNew: false,
+      categorySummary: "OPEN, OBC, SC",
+      pdfUrl: "/cet?pdfId=cet-2026-27-m1"
+    }
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,6 +124,7 @@ const Navbar = () => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setSearchOpen(false);
+    setNotifOpen(false);
     setActiveAccordion(null);
   }, [location]);
 
@@ -305,6 +340,120 @@ const Navbar = () => {
             >
               <FaSearch className="w-3.5 h-3.5" />
             </button>
+
+            {/* Notification Bell Icon & Popover */}
+            <div className="relative shrink-0">
+              <button
+                onClick={() => setNotifOpen(!notifOpen)}
+                className={`w-9 h-9 rounded-xl border transition-all flex items-center justify-center cursor-pointer focus:outline-none relative ${
+                  notifOpen
+                    ? 'bg-[#26130D] text-[#DFAE24] border-[#26130D]'
+                    : 'hover:bg-[#F5F0E6] border-[#DFAE24]/30 text-[#43230F]'
+                }`}
+                aria-label="View Merit List Notifications"
+                title="CET Merit List Notifications"
+              >
+                <FaBell className="w-3.5 h-3.5" />
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-600 text-white font-extrabold text-[9px] rounded-full flex items-center justify-center border border-white shadow-xs animate-pulse">
+                  3
+                </span>
+              </button>
+
+              {/* Dropdown Popover */}
+              {notifOpen && (
+                <>
+                  <div
+                    className="fixed inset-0 z-40"
+                    onClick={() => setNotifOpen(false)}
+                  />
+
+                  <div className="absolute right-0 mt-2.5 w-80 sm:w-96 bg-white border border-[#DFAE24]/40 rounded-2xl shadow-2xl z-50 overflow-hidden font-body text-left">
+                    {/* Header */}
+                    <div className="bg-[#26130D] text-[#FAF8F3] px-4 py-3 border-b border-[#DFAE24]/30 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="w-7 h-7 rounded-lg bg-[#DFAE24] text-[#26130D] flex items-center justify-center font-bold">
+                          <FaBell className="w-3.5 h-3.5" />
+                        </div>
+                        <div>
+                          <h4 className="text-xs sm:text-sm font-extrabold font-heading text-[#FAF8F3]">
+                            CET Merit List Notifications
+                          </h4>
+                          <p className="text-[10px] text-[#DFAE24] font-medium">
+                            All 3 Official Merit Lists Published
+                          </p>
+                        </div>
+                      </div>
+                      <span className="px-2 py-0.5 rounded-md bg-red-600 text-white font-extrabold text-[9px] uppercase tracking-wider">
+                        NEW LIST
+                      </span>
+                    </div>
+
+                    {/* List of 3 Merit Lists */}
+                    <div className="max-h-[380px] overflow-y-auto divide-y divide-[#DFAE24]/15 bg-[#FAF8F3]/30">
+                      {meritNotifications.map((notif) => (
+                        <Link
+                          key={notif.id}
+                          to={notif.pdfUrl}
+                          onClick={() => setNotifOpen(false)}
+                          className="p-3.5 block hover:bg-[#F5F0E6]/80 transition-colors group relative"
+                        >
+                          <div className="flex items-start gap-3">
+                            <div className="w-9 h-9 rounded-xl bg-red-50 text-red-600 border border-red-200 flex items-center justify-center shrink-0 mt-0.5 group-hover:scale-105 transition-transform">
+                              <FaFilePdf className="w-4 h-4 text-red-500" />
+                            </div>
+
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between gap-1 mb-1">
+                                <div className="flex items-center gap-1.5">
+                                  <span className="font-extrabold font-heading text-xs text-[#26130D]">
+                                    {notif.title}
+                                  </span>
+                                  {notif.isNew && (
+                                    <span className="bg-emerald-600 text-white text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded font-heading animate-pulse">
+                                      NEW
+                                    </span>
+                                  )}
+                                </div>
+                                <span className="text-[10px] font-bold text-[#B88E1C] bg-white px-2 py-0.5 rounded border border-[#DFAE24]/30 shrink-0">
+                                  {notif.date}
+                                </span>
+                              </div>
+
+                              <p className="text-[11px] text-[#756D63] font-medium line-clamp-1">
+                                {notif.subtitle}
+                              </p>
+
+                              <div className="mt-2 flex items-center justify-between text-[10px] text-[#756D63]">
+                                <span className="font-semibold text-[#B88E1C] bg-white px-1.5 py-0.5 rounded border border-[#DFAE24]/20">
+                                  Cats: {notif.categorySummary}
+                                </span>
+
+                                <span className="inline-flex items-center gap-1 text-[#26130D] font-extrabold group-hover:text-[#B88E1C] transition-colors">
+                                  <span>Download PDF</span>
+                                  <FaExternalLinkAlt className="w-2.5 h-2.5" />
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+
+                    {/* Footer redirect link */}
+                    <div className="bg-[#FAF8F3] p-2.5 border-t border-[#DFAE24]/30 text-center">
+                      <Link
+                        to="/cet"
+                        onClick={() => setNotifOpen(false)}
+                        className="text-xs font-bold text-[#26130D] hover:text-[#B88E1C] inline-flex items-center gap-1 transition-colors"
+                      >
+                        <span>View All CET Download PDF Sections</span>
+                        <FaExternalLinkAlt className="w-2.5 h-2.5 text-[#B88E1C]" />
+                      </Link>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
 
             <Link
               to="/admission/apply"
