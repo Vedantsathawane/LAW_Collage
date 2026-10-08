@@ -25,7 +25,7 @@ import { capVacancyReport, capMeritLists, capAdvertisementNotice } from '../../d
 
 const CAPAdmissionPage = () => {
   const [activeTab, setActiveTab] = useState('ALL'); // 'ALL' | 'VACANCY' | 'MERIT_LIST' | 'ADVERTISEMENT'
-  const [selectedMeritListId, setSelectedMeritListId] = useState('3rd-merit-list');
+  const [selectedMeritListId, setSelectedMeritListId] = useState('4th-merit-list');
   const [meritSearch, setMeritSearch] = useState('');
   const [selectedMeritCategory, setSelectedMeritCategory] = useState('ALL');
 

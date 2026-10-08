@@ -78,12 +78,22 @@ const Navbar = () => {
 
   const meritNotifications = [
     {
+      id: "cet-2026-27-m4",
+      title: "4th MERIT LIST",
+      subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year)",
+      date: "06/10/2026",
+      time: "1:00 PM IST",
+      isNew: true,
+      categorySummary: "Management, SC Conv., OBC Conv., OPEN",
+      pdfUrl: "/cet?pdfId=cet-2026-27-m4"
+    },
+    {
       id: "cet-2026-27-m3",
       title: "3rd MERIT LIST",
       subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year)",
       date: "05/10/2026",
       time: "1:00 PM IST",
-      isNew: true,
+      isNew: false,
       categorySummary: "OPEN, SC",
       pdfUrl: "/cet?pdfId=cet-2026-27-m3"
     },
@@ -355,7 +365,7 @@ const Navbar = () => {
               >
                 <FaBell className="w-3.5 h-3.5" />
                 <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-600 text-white font-extrabold text-[9px] rounded-full flex items-center justify-center border border-white shadow-xs animate-pulse">
-                  3
+                  {meritNotifications.length}
                 </span>
               </button>
 
@@ -379,7 +389,7 @@ const Navbar = () => {
                             CET Merit List Notifications
                           </h4>
                           <p className="text-[10px] text-[#DFAE24] font-medium">
-                            All 3 Official Merit Lists Published
+                            All {meritNotifications.length} Official Merit Lists Published
                           </p>
                         </div>
                       </div>

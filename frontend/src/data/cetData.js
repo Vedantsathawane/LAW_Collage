@@ -12,6 +12,78 @@ export const CET_YEAR_DATA = [
     isUnderMaintenance: false,
     records: [
       {
+        id: "cet-2026-27-m4",
+        date: "2026-10-06",
+        displayDate: "06-10-2026",
+        formattedDate: "06 October 2026",
+        publicationTime: "13:00",
+        publicationTimeDisplay: "1:00 PM IST",
+        timezone: "Asia/Kolkata",
+        roundName: "Round-IV (4th Merit List)",
+        title: "CET CAP Round-IV 4th Merit List",
+        fullHeaderTitle: "4th Merit List | 06-10-2026",
+        course: "L.L.B. (3 Year Course)",
+        categorySummary: "Management, SC Conv., OBC Conv., OPEN",
+        documentType: "Official CET Merit List",
+        fileUrl: "/pdf/cet/2025/round-4-25-09-2025.pdf",
+        fileType: "PDF",
+        fileSize: "2.1 MB",
+        publishedNote: "4th Merit List Published 06/10/2026 1:00 PM",
+        sections: [
+          {
+            categoryName: "MANAGEMENT",
+            items: [
+              { srNo: 1, name: "Sachin Mohan Dharmik", interSeMerit: 1, meritSrNo: 1, percentile: 62.98, category: "OPEN" },
+              { srNo: 2, name: "Dipali Pankaj Ingalkar", interSeMerit: 2, meritSrNo: 2, percentile: 59.90, category: "OPEN" },
+              { srNo: 3, name: "Anuja Arunpuri Gosavi", interSeMerit: 3, meritSrNo: 3, percentile: 51.17, category: "OPEN" },
+              { srNo: 4, name: "Vinay Sheshrao Bhagat", interSeMerit: 4, meritSrNo: 4, percentile: 51.17, category: "OPEN" },
+              { srNo: 5, name: "Madhavi Devdas Meshram", interSeMerit: 5, meritSrNo: 5, percentile: 19.84, category: "OPEN" },
+              { srNo: 6, name: "Priyanka Jaybhim Patil", interSeMerit: 6, meritSrNo: 6, percentile: 14.92, category: "OPEN" },
+              { srNo: 7, name: "Mohd Faiz Arif Khan", interSeMerit: 7, meritSrNo: 7, percentile: 9.20, category: "OPEN" },
+              { srNo: 8, name: "Sangita Natthuji Patil", interSeMerit: 8, meritSrNo: 8, percentile: 5.28, category: "OPEN" }
+            ]
+          },
+          {
+            categoryName: "SC Converted To NT-2 (NT C)",
+            items: [
+              { srNo: 1, name: "Manojkumar Youraj Bagade", interSeMerit: 1, meritSrNo: 10, percentile: 78.15, category: "SC" }
+            ]
+          },
+          {
+            categoryName: "SC Converted To NT-3 (NT D)",
+            items: [
+              { srNo: 1, name: "Roja Rajkumar Bankar", interSeMerit: 1, meritSrNo: 192, percentile: 42.52, category: "SC" }
+            ]
+          },
+          {
+            categoryName: "OBC Converted To SEBC",
+            items: [
+              { srNo: 1, name: "Paresh Gajanan Bhoge", interSeMerit: 1, meritSrNo: 401, percentile: 11.02, category: "OBC" }
+            ]
+          },
+          {
+            categoryName: "OPEN-GENERAL",
+            items: [
+              { srNo: 1, name: "Prachi Ravindra Wankhede", interSeMerit: 1, meritSrNo: 19, percentile: 73.83, category: "OPEN" }
+            ]
+          }
+        ],
+        candidates: [
+          { srNo: 1, name: "Sachin Mohan Dharmik", interSeMerit: 1, meritSrNo: 1, percentile: 62.98, category: "OPEN" },
+          { srNo: 2, name: "Dipali Pankaj Ingalkar", interSeMerit: 2, meritSrNo: 2, percentile: 59.90, category: "OPEN" },
+          { srNo: 3, name: "Anuja Arunpuri Gosavi", interSeMerit: 3, meritSrNo: 3, percentile: 51.17, category: "OPEN" },
+          { srNo: 4, name: "Vinay Sheshrao Bhagat", interSeMerit: 4, meritSrNo: 4, percentile: 51.17, category: "OPEN" },
+          { srNo: 5, name: "Madhavi Devdas Meshram", interSeMerit: 5, meritSrNo: 5, percentile: 19.84, category: "OPEN" },
+          { srNo: 6, name: "Priyanka Jaybhim Patil", interSeMerit: 6, meritSrNo: 6, percentile: 14.92, category: "OPEN" },
+          { srNo: 7, name: "Mohd Faiz Arif Khan", interSeMerit: 7, meritSrNo: 7, percentile: 9.20, category: "OPEN" },
+          { srNo: 8, name: "Sangita Natthuji Patil", interSeMerit: 8, meritSrNo: 8, percentile: 5.28, category: "OPEN" },
+          { srNo: 1, name: "Manojkumar Youraj Bagade", interSeMerit: 1, meritSrNo: 10, percentile: 78.15, category: "SC" },
+          { srNo: 1, name: "Roja Rajkumar Bankar", interSeMerit: 1, meritSrNo: 192, percentile: 42.52, category: "SC" },
+          { srNo: 1, name: "Paresh Gajanan Bhoge", interSeMerit: 1, meritSrNo: 401, percentile: 11.02, category: "OBC" },
+          { srNo: 1, name: "Prachi Ravindra Wankhede", interSeMerit: 1, meritSrNo: 19, percentile: 73.83, category: "OPEN" }
+        ]
+      },
+      {
         id: "cet-2026-27-m3",
         date: "2026-10-05",
         displayDate: "05-10-2026",

@@ -6,8 +6,8 @@ import Container from '../../components/common/Container';
 import { capMeritLists } from '../../data/capData';
 
 const CAPMeritListPage = () => {
-  // Expanded Date Card state (Default expand the 3rd merit list)
-  const [openCardId, setOpenCardId] = useState('3rd-merit-list');
+  // Expanded Date Card state (Default expand the 4th merit list)
+  const [openCardId, setOpenCardId] = useState('4th-merit-list');
   const [meritSearch, setMeritSearch] = useState('');
   const [selectedMeritCategory, setSelectedMeritCategory] = useState('ALL');
 
@@ -27,7 +27,7 @@ const CAPMeritListPage = () => {
         <title>Institutional Round Merit List 2026-27 | Dr. Milind Yerne College of Law</title>
         <meta
           name="description"
-          content="Official CET CAP Round-IV Institutional Merit Lists for LL.B. (3 Year Course) at Dr. Milind Yerne College of Law Kosra. 1st List (03/10/2026), 2nd List (04/10/2026) & 3rd List (05/10/2026)."
+          content="Official CET CAP Round-IV Institutional Merit Lists for LL.B. (3 Year Course) at Dr. Milind Yerne College of Law Kosra. 1st List (03/10/2026), 2nd List (04/10/2026), 3rd List (05/10/2026) & 4th List (06/10/2026)."
         />
         <link rel="canonical" href="https://drmycollegeoflaw.org/cap-admission/merit-list" />
       </Helmet>
@@ -60,7 +60,7 @@ const CAPMeritListPage = () => {
             className="text-sm md:text-base text-[#756D63] font-medium font-body leading-relaxed max-w-2xl mx-auto"
           >
             L.L.B. (3 Year Course) official date-wise candidate ranking records. <br className="hidden sm:block" />
-            <strong className="text-[#26130D]">1st List:</strong> 03/10/2026 &bull; <strong className="text-[#26130D]">2nd List:</strong> 04/10/2026 &bull; <strong className="text-[#26130D]">3rd List:</strong> 05/10/2026 at 1:00 PM IST
+            <strong className="text-[#26130D]">1st List:</strong> 03/10/2026 &bull; <strong className="text-[#26130D]">2nd List:</strong> 04/10/2026 &bull; <strong className="text-[#26130D]">3rd List:</strong> 05/10/2026 &bull; <strong className="text-[#26130D]">4th List:</strong> 06/10/2026 at 1:00 PM IST
           </motion.p>
 
           <motion.div

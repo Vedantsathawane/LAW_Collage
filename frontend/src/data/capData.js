@@ -233,14 +233,67 @@ export const capMeritListRoundIV_3rd = {
   ]
 };
 
+export const capMeritListRoundIV_4th = {
+  id: "4th-merit-list",
+  title: "4th MERIT LIST",
+  collegeName: "Dr. Milind Yerne College of Law, Kosara Kondha",
+  subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year Course)",
+  roundTitle: "Round-IV (4th List)",
+  publishedDate: "06/10/2026",
+  publicationTime: "1:00 PM",
+  displayDate: "06/10/2026 at 1:00 PM",
+  publishedNote: "4th Merit List Published 06/10/2026 1:00 PM",
+  signatory: "Dr. Milind Yerne, Principal / Incharge",
+  categoriesData: [
+    {
+      categoryName: "Management",
+      candidates: [
+        { srNo: 1, name: "Sachin Mohan Dharmik", interSeMerit: 1, meritListNo: 1, cetPercentile: "62.98", category: "OPEN" },
+        { srNo: 2, name: "Dipali Pankaj Ingalkar", interSeMerit: 2, meritListNo: 2, cetPercentile: "59.90", category: "OPEN" },
+        { srNo: 3, name: "Anuja Arunpuri Gosavi", interSeMerit: 3, meritListNo: 3, cetPercentile: "51.17", category: "OPEN" },
+        { srNo: 4, name: "Vinay Sheshrao Bhagat", interSeMerit: 4, meritListNo: 4, cetPercentile: "51.17", category: "OPEN" },
+        { srNo: 5, name: "Madhavi Devdas Meshram", interSeMerit: 5, meritListNo: 5, cetPercentile: "19.84", category: "OPEN" },
+        { srNo: 6, name: "Priyanka Jaybhim Patil", interSeMerit: 6, meritListNo: 6, cetPercentile: "14.92", category: "OPEN" },
+        { srNo: 7, name: "Mohd Faiz Arif Khan", interSeMerit: 7, meritListNo: 7, cetPercentile: "9.20", category: "OPEN" },
+        { srNo: 8, name: "Sangita Natthuji Patil", interSeMerit: 8, meritListNo: 8, cetPercentile: "5.28", category: "OPEN" }
+      ]
+    },
+    {
+      categoryName: "SC Converted To NT-2 (NT C)",
+      candidates: [
+        { srNo: 1, name: "Manojkumar Youraj Bagade", interSeMerit: 1, meritListNo: 10, cetPercentile: "78.15", category: "SC" }
+      ]
+    },
+    {
+      categoryName: "SC Converted To NT-3 (NT D)",
+      candidates: [
+        { srNo: 1, name: "Roja Rajkumar Bankar", interSeMerit: 1, meritListNo: 192, cetPercentile: "42.52", category: "SC" }
+      ]
+    },
+    {
+      categoryName: "OBC Converted To SEBC",
+      candidates: [
+        { srNo: 1, name: "Paresh Gajanan Bhoge", interSeMerit: 1, meritListNo: 401, cetPercentile: "11.02", category: "OBC" }
+      ]
+    },
+    {
+      categoryName: "OPEN-GENERAL",
+      candidates: [
+        { srNo: 1, name: "Prachi Ravindra Wankhede", interSeMerit: 1, meritListNo: 19, cetPercentile: "73.83", category: "OPEN" }
+      ]
+    }
+  ]
+};
+
 export const capMeritLists = [
+  capMeritListRoundIV_4th,
   capMeritListRoundIV_3rd,
   capMeritListRoundIV_2nd,
   capMeritListRoundIV_1st
 ];
 
 // Default export for backward compatibility
-export const capMeritListRoundIV = capMeritListRoundIV_3rd;
+export const capMeritListRoundIV = capMeritListRoundIV_4th;
 
 export const capAdvertisementNotice = {
   paperName: "देशोन्नती (Deshonnati News Notification)",
