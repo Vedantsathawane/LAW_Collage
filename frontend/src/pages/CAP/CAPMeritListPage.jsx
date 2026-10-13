@@ -6,8 +6,8 @@ import Container from '../../components/common/Container';
 import { capMeritLists } from '../../data/capData';
 
 const CAPMeritListPage = () => {
-  // Expanded Date Card state (Default expand the 4th merit list)
-  const [openCardId, setOpenCardId] = useState('4th-merit-list');
+  // Expanded Date Card state (Default expand the latest Extended Round merit list)
+  const [openCardId, setOpenCardId] = useState('extended-round-merit-list');
   const [meritSearch, setMeritSearch] = useState('');
   const [selectedMeritCategory, setSelectedMeritCategory] = useState('ALL');
 
@@ -24,10 +24,10 @@ const CAPMeritListPage = () => {
   return (
     <div className="pt-8 pb-20 bg-[#FAF8F3] font-body min-h-[85vh]">
       <Helmet>
-        <title>Institutional Round Merit List 2026-27 | Dr. Milind Yerne College of Law</title>
+        <title>Institutional & Extended Round Merit List 2026-27 | Dr. Milind Yerne College of Law</title>
         <meta
           name="description"
-          content="Official CET CAP Round-IV Institutional Merit Lists for LL.B. (3 Year Course) at Dr. Milind Yerne College of Law Kosra. 1st List (03/10/2026), 2nd List (04/10/2026), 3rd List (05/10/2026) & 4th List (06/10/2026)."
+          content="Official CET CAP Extended Round & Round-IV Institutional Merit Lists for LL.B. (3 Year Course) at Dr. Milind Yerne College of Law Kosra. Extended Round (12/10/2026), 4th List (06/10/2026), 3rd List (05/10/2026), 2nd List (04/10/2026) & 1st List (03/10/2026)."
         />
         <link rel="canonical" href="https://drmycollegeoflaw.org/cap-admission/merit-list" />
       </Helmet>
@@ -41,7 +41,7 @@ const CAPMeritListPage = () => {
             transition={{ duration: 0.4 }}
             className="inline-block text-[11px] md:text-xs font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full bg-[#FAF8F3] text-[#B88E1C] border border-[#DFAE24]/40 shadow-xs mb-3 font-heading"
           >
-            CET CAP Round-IV (Institutional Round) 2026-27
+            CET CAP Institutional & Extended Round 2026-27
           </motion.span>
 
           <motion.h1
@@ -60,7 +60,7 @@ const CAPMeritListPage = () => {
             className="text-sm md:text-base text-[#756D63] font-medium font-body leading-relaxed max-w-2xl mx-auto"
           >
             L.L.B. (3 Year Course) official date-wise candidate ranking records. <br className="hidden sm:block" />
-            <strong className="text-[#26130D]">1st List:</strong> 03/10/2026 &bull; <strong className="text-[#26130D]">2nd List:</strong> 04/10/2026 &bull; <strong className="text-[#26130D]">3rd List:</strong> 05/10/2026 &bull; <strong className="text-[#26130D]">4th List:</strong> 06/10/2026 at 1:00 PM IST
+            <strong className="text-[#26130D]">Extended Round:</strong> 12/10/2026 &bull; <strong className="text-[#26130D]">4th List:</strong> 06/10/2026 &bull; <strong className="text-[#26130D]">3rd List:</strong> 05/10/2026 &bull; <strong className="text-[#26130D]">2nd List:</strong> 04/10/2026 &bull; <strong className="text-[#26130D]">1st List:</strong> 03/10/2026 at 1:00 PM IST
           </motion.p>
 
           <motion.div
@@ -91,7 +91,7 @@ const CAPMeritListPage = () => {
                   </span>
                 </div>
                 <p className="text-xs text-[#DFAE24] font-medium mt-0.5">
-                  Dr. Milind Yerne College of Law &bull; CET CAP Round-IV (Institutional Round)
+                  Dr. Milind Yerne College of Law &bull; CET CAP Round-IV & Extended Round (Institutional Round)
                 </p>
               </div>
             </div>

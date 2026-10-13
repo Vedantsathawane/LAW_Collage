@@ -285,7 +285,39 @@ export const capMeritListRoundIV_4th = {
   ]
 };
 
+export const capMeritListExtendedRound = {
+  id: "extended-round-merit-list",
+  title: "EXTENDED ROUND MERIT LIST",
+  collegeName: "Dr. Milind Yerne College of Law, Kosara Kondha",
+  subtitle: "CET CAP Extended Round (Institutional Round) 2026-27 | L.L.B. (3 Year Course)",
+  roundTitle: "Extended Round (Institutional Round)",
+  publishedDate: "12/10/2026",
+  publicationTime: "1:00 PM",
+  displayDate: "12/10/2026 at 1:00 PM",
+  publishedNote: "Extended Round Merit List Published 12/10/2026 1:00 PM",
+  signatory: "Dr. Milind Yerne, Principal / Incharge",
+  categoriesData: [
+    {
+      categoryName: "Management",
+      candidates: [
+        { srNo: 1, name: "Patel Aman Nemichand", interSeMerit: 1, meritListNo: 1, cetPercentile: "65.49", category: "OPEN" },
+        { srNo: 2, name: "Jyotsana Ramesh Tighare", interSeMerit: 2, meritListNo: 2, cetPercentile: "51.01", category: "OPEN" },
+        { srNo: 3, name: "Ghatole Sonali Virendra", interSeMerit: 3, meritListNo: 3, cetPercentile: "33.92", category: "OPEN" }
+      ]
+    },
+    {
+      categoryName: "SC Converted To SEBC",
+      candidates: [
+        { srNo: 1, name: "Shailesh Tarachand Patil", interSeMerit: 1, meritListNo: 2, cetPercentile: "83.08", category: "SC" },
+        { srNo: 2, name: "Ratnakul Yeshwant Meshram", interSeMerit: 2, meritListNo: 21, cetPercentile: "59.90", category: "SC" },
+        { srNo: 3, name: "Tayade Swati Suresh", interSeMerit: 3, meritListNo: 52, cetPercentile: "31.75", category: "SC" }
+      ]
+    }
+  ]
+};
+
 export const capMeritLists = [
+  capMeritListExtendedRound,
   capMeritListRoundIV_4th,
   capMeritListRoundIV_3rd,
   capMeritListRoundIV_2nd,

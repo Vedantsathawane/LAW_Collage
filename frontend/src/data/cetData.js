@@ -12,6 +12,51 @@ export const CET_YEAR_DATA = [
     isUnderMaintenance: false,
     records: [
       {
+        id: "cet-2026-27-m-ext",
+        date: "2026-10-12",
+        displayDate: "12-10-2026",
+        formattedDate: "12 October 2026",
+        publicationTime: "13:00",
+        publicationTimeDisplay: "1:00 PM IST",
+        timezone: "Asia/Kolkata",
+        roundName: "Extended Round (Institutional Round)",
+        title: "CET CAP Extended Round Merit List",
+        fullHeaderTitle: "Extended Round Merit List | 12-10-2026",
+        course: "L.L.B. (3 Year Course)",
+        categorySummary: "Management, SC Converted to SEBC",
+        documentType: "Official CET Merit List",
+        fileUrl: "/pdf/cet/2025/round-4-25-09-2025.pdf",
+        fileType: "PDF",
+        fileSize: "1.8 MB",
+        publishedNote: "Extended Round Merit List Published 12/10/2026 1:00 PM",
+        sections: [
+          {
+            categoryName: "MANAGEMENT",
+            items: [
+              { srNo: 1, name: "Patel Aman Nemichand", interSeMerit: 1, meritSrNo: 1, percentile: 65.49, category: "OPEN" },
+              { srNo: 2, name: "Jyotsana Ramesh Tighare", interSeMerit: 2, meritSrNo: 2, percentile: 51.01, category: "OPEN" },
+              { srNo: 3, name: "Ghatole Sonali Virendra", interSeMerit: 3, meritSrNo: 3, percentile: 33.92, category: "OPEN" }
+            ]
+          },
+          {
+            categoryName: "SC CONVERTED TO SEBC",
+            items: [
+              { srNo: 1, name: "Shailesh Tarachand Patil", interSeMerit: 1, meritSrNo: 2, percentile: 83.08, category: "SC" },
+              { srNo: 2, name: "Ratnakul Yeshwant Meshram", interSeMerit: 2, meritSrNo: 21, percentile: 59.90, category: "SC" },
+              { srNo: 3, name: "Tayade Swati Suresh", interSeMerit: 3, meritSrNo: 52, percentile: 31.75, category: "SC" }
+            ]
+          }
+        ],
+        candidates: [
+          { srNo: 1, name: "Patel Aman Nemichand", interSeMerit: 1, meritSrNo: 1, percentile: 65.49, category: "OPEN" },
+          { srNo: 2, name: "Jyotsana Ramesh Tighare", interSeMerit: 2, meritSrNo: 2, percentile: 51.01, category: "OPEN" },
+          { srNo: 3, name: "Ghatole Sonali Virendra", interSeMerit: 3, meritSrNo: 3, percentile: 33.92, category: "OPEN" },
+          { srNo: 1, name: "Shailesh Tarachand Patil", interSeMerit: 1, meritSrNo: 2, percentile: 83.08, category: "SC" },
+          { srNo: 2, name: "Ratnakul Yeshwant Meshram", interSeMerit: 2, meritSrNo: 21, percentile: 59.90, category: "SC" },
+          { srNo: 3, name: "Tayade Swati Suresh", interSeMerit: 3, meritSrNo: 52, percentile: 31.75, category: "SC" }
+        ]
+      },
+      {
         id: "cet-2026-27-m4",
         date: "2026-10-06",
         displayDate: "06-10-2026",

@@ -78,12 +78,22 @@ const Navbar = () => {
 
   const meritNotifications = [
     {
+      id: "cet-2026-27-m-ext",
+      title: "EXTENDED ROUND MERIT LIST",
+      subtitle: "CET CAP Extended Round (Institutional Round) 2026-27 | L.L.B. (3 Year)",
+      date: "12/10/2026",
+      time: "1:00 PM IST",
+      isNew: true,
+      categorySummary: "Management, SC Converted to SEBC",
+      pdfUrl: "/cap-admission/merit-list"
+    },
+    {
       id: "cet-2026-27-m4",
       title: "4th MERIT LIST",
       subtitle: "CET CAP Round-IV (Institutional Round) 2026-27 | L.L.B. (3 Year)",
       date: "06/10/2026",
       time: "1:00 PM IST",
-      isNew: true,
+      isNew: false,
       categorySummary: "Management, SC Conv., OBC Conv., OPEN",
       pdfUrl: "/cet?pdfId=cet-2026-27-m4"
     },
