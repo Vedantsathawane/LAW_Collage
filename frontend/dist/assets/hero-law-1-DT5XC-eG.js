@@ -1,0 +1,1 @@
+var e=`/assets/hero-law-1-CjEfI5sW.jpg`;export{e as t};
