@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFilePdf, FaExternalLinkAlt, FaDownload, FaClock, FaListOl, FaCheckCircle, FaGraduationCap } from 'react-icons/fa';
 import { isRecordPublished } from '../../data/cetData';
+import { downloadMeritListPDF } from '../../utils/meritListPdfGenerator';
 
 const CETDateCard = ({ record, onViewPdf }) => {
   const {
@@ -111,6 +112,10 @@ const CETDateCard = ({ record, onViewPdf }) => {
               {/* Download PDF Button */}
               <a
                 href={fileUrl}
+                onClick={(e) => {
+                  e.preventDefault();
+                  downloadMeritListPDF(record);
+                }}
                 download={`CET-Result-${roundName.replace(/\s+/g, '-')}-${displayDate.replace(/\s+/g, '-')}.pdf`}
                 className="flex-1 lg:flex-none inline-flex items-center justify-center gap-2 bg-[#DFAE24] hover:bg-[#F4C430] text-[#28150A] text-xs font-extrabold px-4 py-2.5 rounded-xl shadow-xs transition-all border border-[#B88E1C]/40 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#26130D]"
                 aria-label={`Download CET Results PDF for ${displayDate}`}

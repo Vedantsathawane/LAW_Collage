@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FaSearch, FaAward, FaPrint, FaCalendarAlt, FaClock, FaCheckCircle, FaBuilding, FaListOl, FaFolderOpen, FaPlus, FaMinus } from 'react-icons/fa';
+import { FaSearch, FaAward, FaPrint, FaDownload, FaCalendarAlt, FaClock, FaCheckCircle, FaBuilding, FaListOl, FaFolderOpen, FaPlus, FaMinus } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import Container from '../../components/common/Container';
 import { capMeritLists } from '../../data/capData';
+import { downloadMeritListPDF } from '../../utils/meritListPdfGenerator';
 
 const CAPMeritListPage = () => {
   // Expanded Date Card state (Default expand the latest Extended Round merit list)
@@ -238,12 +239,21 @@ const CAPMeritListPage = () => {
                               </select>
                             </div>
 
-                            <button
-                              onClick={handlePrint}
-                              className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-[#DFAE24]/40 rounded-xl text-xs font-bold text-[#26130D] hover:bg-[#FAF8F3] transition-colors shadow-xs font-heading cursor-pointer shrink-0"
-                            >
-                              <FaPrint className="text-[#B88E1C]" /> Print Official List
-                            </button>
+                            <div className="flex items-center gap-2 shrink-0">
+                              <button
+                                onClick={() => downloadMeritListPDF(list)}
+                                className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#DFAE24] hover:bg-[#F4C430] text-[#26130D] rounded-xl text-xs font-extrabold transition-colors shadow-xs font-heading cursor-pointer border border-[#B88E1C]/40"
+                                title="Download Full Official PDF"
+                              >
+                                <FaDownload /> Download Official PDF
+                              </button>
+                              <button
+                                onClick={handlePrint}
+                                className="inline-flex items-center gap-2 px-4 py-1.5 bg-white border border-[#DFAE24]/40 rounded-xl text-xs font-bold text-[#26130D] hover:bg-[#FAF8F3] transition-colors shadow-xs font-heading cursor-pointer"
+                              >
+                                <FaPrint className="text-[#B88E1C]" /> Print
+                              </button>
+                            </div>
                           </div>
 
                           {/* Candidate Tables Group */}

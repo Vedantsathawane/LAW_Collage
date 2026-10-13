@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaDownload, FaFilePdf, FaListOl, FaSearch, FaPrint } from 'react-icons/fa';
 import OfficialStraightDocumentSheet from './OfficialStraightDocumentSheet';
+import { downloadMeritListPDF } from '../../utils/meritListPdfGenerator';
 
 const PDFViewerModal = ({ isOpen, onClose, record }) => {
   const [activeTab, setActiveTab] = useState('sheet'); // 'sheet' | 'candidates'
@@ -95,12 +96,16 @@ const PDFViewerModal = ({ isOpen, onClose, record }) => {
 
               <a
                 href={fileUrl}
+                onClick={(e) => {
+                  e.preventDefault();
+                  downloadMeritListPDF(record);
+                }}
                 download
-                className="inline-flex items-center gap-1.5 bg-[#DFAE24] hover:bg-[#F4C430] text-[#28150A] text-xs font-extrabold px-3 py-1.5 rounded-xl shadow-xs border border-[#B88E1C]/40 transition-all"
-                title="Download original PDF"
+                className="inline-flex items-center gap-1.5 bg-[#DFAE24] hover:bg-[#F4C430] text-[#28150A] text-xs font-extrabold px-3 py-1.5 rounded-xl shadow-xs border border-[#B88E1C]/40 transition-all cursor-pointer"
+                title="Download official PDF"
               >
                 <FaDownload className="w-3 h-3" />
-                <span className="hidden md:inline">Download</span>
+                <span className="hidden md:inline">Download PDF</span>
               </a>
 
               <button

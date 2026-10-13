@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPrint, FaDownload, FaCheckCircle, FaStamp } from 'react-icons/fa';
+import { downloadMeritListPDF } from '../../utils/meritListPdfGenerator';
 
 const OfficialStraightDocumentSheet = ({ record }) => {
   if (!record) return null;
@@ -16,6 +17,11 @@ const OfficialStraightDocumentSheet = ({ record }) => {
 
   const handlePrint = () => {
     window.print();
+  };
+
+  const handleDownload = (e) => {
+    e.preventDefault();
+    downloadMeritListPDF(record);
   };
 
   return (
@@ -37,6 +43,7 @@ const OfficialStraightDocumentSheet = ({ record }) => {
           </button>
           <a
             href={fileUrl}
+            onClick={handleDownload}
             download
             className="inline-flex items-center gap-1.5 bg-[#DFAE24] hover:bg-[#F4C430] text-[#28150A] text-xs font-extrabold px-3.5 py-1.5 rounded-lg transition-all cursor-pointer shadow-xs"
           >
